@@ -12,6 +12,7 @@ namespace ProjektPO
         {
             Console.WriteLine("Błagm, działaj");
 
+            Console.WriteLine("Chyba działa");
 
 
 
