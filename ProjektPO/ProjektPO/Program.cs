@@ -10,6 +10,11 @@ namespace ProjektPO
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Błagm, działaj");
+
+
+
+
         }
     }
 }
