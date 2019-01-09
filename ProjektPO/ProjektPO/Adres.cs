@@ -53,6 +53,7 @@ namespace Projekt
             this.numerMieszkania = numerMieszkania;
             this.KodPocztowy = kodPocztowy;
             this.Miasto = Miasto;
+            //kmjkniybh
         }
 
         public override string ToString()
