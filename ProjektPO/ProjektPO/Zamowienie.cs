@@ -47,6 +47,8 @@ namespace Projekt
             this.menuWybor = menuWybor;
         }
 
+
+        //wyświetla listę diet możliwych do wyboru i pozwala na wybranie jednej
         public void WybierzDiete()
         {
             int n, pozycja = 0;
@@ -70,6 +72,8 @@ namespace Projekt
             }
         }
 
+
+        //wyświetla listę alergenów dla wybranej wcześniej diety i pozwala na wybranie kilku alergenów lub 
         public void WybierzAlergent()
         {
             int pozycja = 0, n;
@@ -98,6 +102,8 @@ namespace Projekt
             } while (n != 0);
         }
 
+
+        //oblicza cenę końcową zamówienia = cena wybranej diety + ceny wybranych alergenów
         public double CenaKoncowa()
         {
             double cenaKoncowa;

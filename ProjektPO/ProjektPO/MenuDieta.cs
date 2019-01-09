@@ -14,6 +14,7 @@ namespace Projekt
         {
             Menu = new List<Dieta>();
 
+            SAlergen S0 = new SAlergen(ERodzajAlergenu.brak, 0);
             SAlergen S1 = new SAlergen(ERodzajAlergenu.gluten, 4.0);
             SAlergen S2 = new SAlergen(ERodzajAlergenu.mleko, 3.5);
             SAlergen S3 = new SAlergen(ERodzajAlergenu.jajka, 3.5);
@@ -28,6 +29,7 @@ namespace Projekt
             SAlergen S14 = new SAlergen(ERodzajAlergenu.mięczaki, 3.0);
 
             List<SAlergen> alergenyPodstawowa = new List<SAlergen>();
+            alergenyPodstawowa.Add(S0);
             alergenyPodstawowa.Add(S1);
             alergenyPodstawowa.Add(S2);
             alergenyPodstawowa.Add(S3);
@@ -42,6 +44,7 @@ namespace Projekt
             alergenyPodstawowa.Add(S14);
 
             List<SAlergen> alergenyWegetarianska = new List<SAlergen>();
+            alergenyWegetarianska.Add(S0);
             alergenyWegetarianska.Add(S1);
             alergenyWegetarianska.Add(S2);
             alergenyWegetarianska.Add(S3);
@@ -53,6 +56,7 @@ namespace Projekt
             alergenyWegetarianska.Add(S13);
 
             List<SAlergen> alergenyWeganska = new List<SAlergen>();
+            alergenyWeganska.Add(S0);
             alergenyWeganska.Add(S1);
             alergenyWeganska.Add(S6);
             alergenyWeganska.Add(S8);
@@ -62,6 +66,7 @@ namespace Projekt
             alergenyWeganska.Add(S13);
 
             List<SAlergen> alergenyBezlaktozowa = new List<SAlergen>();
+            alergenyBezlaktozowa.Add(S0);
             alergenyBezlaktozowa.Add(S1);
             alergenyBezlaktozowa.Add(S3);
             alergenyBezlaktozowa.Add(S4);
@@ -75,6 +80,7 @@ namespace Projekt
             alergenyBezlaktozowa.Add(S14);
 
             List<SAlergen> alergenyBezglutenowa = new List<SAlergen>();
+            alergenyBezglutenowa.Add(S0);
             alergenyBezglutenowa.Add(S2);
             alergenyBezglutenowa.Add(S3);
             alergenyBezglutenowa.Add(S4);
