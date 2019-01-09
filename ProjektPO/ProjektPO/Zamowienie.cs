@@ -11,40 +11,113 @@ namespace Projekt
         DateTime dataKoncaZamowienia;
         static int liczbaZamowien;
         Adres adres;
+        Dieta wybranaDieta;
+        MenuDieta menuWybor;
 
-        public string NumerZamowienia { get => numerZamowienia; set => numerZamowienia = value; }
+
         public DateTime DataRozpoczeciaZamowienia { get => dataRozpoczeciaZamowienia; set => dataRozpoczeciaZamowienia = value; }
         public DateTime DataKoncaZamowienia { get => dataKoncaZamowienia; set => dataKoncaZamowienia = value; }
-
+        internal Adres Adres { get => adres; set => adres = value; }
+        public Dieta WybranaDieta { get => wybranaDieta; set => wybranaDieta = value; }
+        internal MenuDieta MenuWybor { get => menuWybor; set => menuWybor = value; }
 
         static Zamowienie()
         {
-            liczbaZamowien = 0;
+            liczbaZamowien = 100;
         }
 
         public Zamowienie()
         {
             dataRozpoczeciaZamowienia = DateTime.Now;
             dataKoncaZamowienia = DateTime.Now;
+            liczbaZamowien++;
             numerZamowienia = liczbaZamowien + "/" + dataRozpoczeciaZamowienia.Year;
+            wybranaDieta = new Dieta();
+            menuWybor = new MenuDieta();
         }
 
-        public Zamowienie(string numerZamowienia, DateTime dataRozpoczeciaZamowienia, DateTime dataKoncaZamowienia)
+        public Zamowienie(DateTime dataRozpoczeciaZamowienia, DateTime dataKoncaZamowienia, Adres adres, Dieta wybranaDieta, MenuDieta menuWybor)
         {
-            this.numerZamowienia = numerZamowienia;
+            liczbaZamowien++;
+            numerZamowienia = liczbaZamowien + "/" + dataRozpoczeciaZamowienia.Year;
             this.dataRozpoczeciaZamowienia = dataRozpoczeciaZamowienia;
             this.dataKoncaZamowienia = dataKoncaZamowienia;
+            this.adres = adres;
+            this.wybranaDieta = wybranaDieta;
+            this.menuWybor = menuWybor;
         }
 
 
-
-        public int ileDni()   //
+        //wyświetla listę diet możliwych do wyboru i pozwala na wybranie jednej
+        public void WybierzDiete()
         {
-            return (dataKoncaZamowienia - dataRozpoczeciaZamowienia).Days;
+            int n, pozycja = 0;
+            foreach (Dieta d in menuWybor.Menu)
+            {
+                pozycja++;
+                string s = pozycja + ". " + d.Typ.ToString();
+                Console.WriteLine(s);
+            }
 
+            Console.WriteLine("Wybierz numer diety: ");
+            if (Int32.TryParse(Console.ReadLine(), out n)) ;
+            {
+                if (n > 0 && n < pozycja)
+                    WybranaDieta = MenuWybor.Menu[n - 1];
+                else
+                {
+                    throw new ArgumentOutOfRangeException("Nieistniejąca dieta!");
+
+                }
+            }
         }
 
 
+        //wyświetla listę alergenów dla wybranej wcześniej diety i pozwala na wybranie kilku alergenów lub braku(co oznacza, że nie wybierasz żadnego)
+        public void WybierzAlergent()
+        {
+            int pozycja = 0, n;
+            foreach (SAlergen a in WybranaDieta.Alergeny)
+            {
+                pozycja++;
+                string s = pozycja + ". " + a.Nazwa.ToString();
+                Console.WriteLine(s);
+            }
+            
+            Console.WriteLine("Wybierz numer alergentu: ");
+
+            do
+            {
+                if (Int32.TryParse(Console.ReadLine(), out n)) ;
+                {
+                    if (n > 0 && n < pozycja)
+                        WybranaDieta.Alergeny[n - 1].Wybrane = true;
+
+                    else
+                    {
+                        throw new ArgumentOutOfRangeException("Nieistniejący alergen!");
+                    }
+                }
+            } while (n != 0);
+        }
+
+
+        //oblicza cenę końcową zamówienia = cena wybranej diety + ceny wybranych alergenów
+        public double CenaKoncowa()
+        {
+            double cenaKoncowa;
+            cenaKoncowa = WybranaDieta.Cena;
+
+            foreach (SAlergen a in WybranaDieta.Alergeny)
+            {
+                if (a.Wybrane == true)
+                {
+                    cenaKoncowa = cenaKoncowa + a.Cena;
+                }
+            }
+            Console.WriteLine(cenaKoncowa);
+            return cenaKoncowa;
+        }
 
     }
 }

@@ -15,7 +15,26 @@ namespace Projekt
         public string Ulica { get => ulica; set => ulica = value; }
         public string NumerDomu { get => numerDomu; set => numerDomu = value; }
         public int NumerMieszkania { get => numerMieszkania; set => numerMieszkania = value; }
-        public string KodPocztowy { get => kodPocztowy; set => kodPocztowy = value; }
+        public string KodPocztowy
+        {
+            get
+            {
+                return kodPocztowy;
+            }
+
+            set
+            {
+                if (value.Length < 6 && value.Length > 4)
+                {
+                    throw new FormatException("niepoprawny format (brak '-' pomiędzy liczbami)!");
+                }
+                if (value[2] != '-')
+                {
+                    throw new FormatException("niepoprawny format (brak '-' pomiędzy liczbami)!");
+                }
+                kodPocztowy = value;
+            }
+        }
         public string Miasto1 { get => Miasto; set => Miasto = value; }
 
         public Adres()
@@ -29,11 +48,12 @@ namespace Projekt
 
         public Adres(string ulica, string numerDomu, int numerMieszkania, string kodPocztowy, string Miasto)
         {
-            this.Ulica = ulica;
-            this.NumerDomu = numerDomu;
-            this.NumerMieszkania = numerMieszkania;
+            this.ulica = ulica;
+            this.numerDomu = numerDomu;
+            this.numerMieszkania = numerMieszkania;
             this.KodPocztowy = kodPocztowy;
-            this.Miasto1 = Miasto;
+            this.Miasto = Miasto;
+            //kmjkniybh
         }
 
         public override string ToString()

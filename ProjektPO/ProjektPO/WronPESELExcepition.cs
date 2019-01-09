@@ -5,16 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Projekt
+
 {
-    class Program
+    class WronPESELExcepition : Exception
     {
-        static void Main(string[] args)
+        public WronPESELExcepition() : base()
         {
-            Console.WriteLine("Błagm, działaj");
-
-
-
-
         }
     }
 }
