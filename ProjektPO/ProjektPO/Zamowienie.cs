@@ -73,7 +73,7 @@ namespace Projekt
         }
 
 
-        //wyświetla listę alergenów dla wybranej wcześniej diety i pozwala na wybranie kilku alergenów lub 
+        //wyświetla listę alergenów dla wybranej wcześniej diety i pozwala na wybranie kilku alergenów lub braku(co oznacza, że nie wybierasz żadnego)
         public void WybierzAlergent()
         {
             int pozycja = 0, n;
@@ -83,8 +83,7 @@ namespace Projekt
                 string s = pozycja + ". " + a.Nazwa.ToString();
                 Console.WriteLine(s);
             }
-            Console.WriteLine("0. KONIEC");
-
+            
             Console.WriteLine("Wybierz numer alergentu: ");
 
             do
