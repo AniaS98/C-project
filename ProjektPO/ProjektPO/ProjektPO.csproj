@@ -45,6 +45,7 @@
     <Compile Include="Adres.cs" />
     <Compile Include="Dieta.cs" />
     <Compile Include="Klient.cs" />
+    <Compile Include="ListaKlientow.cs" />
     <Compile Include="MenuDieta.cs" />
     <Compile Include="Osoba.cs" />
     <Compile Include="Pracownik.cs" />
