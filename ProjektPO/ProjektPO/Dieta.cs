@@ -22,27 +22,31 @@ namespace Projekt
         ryby,
         skorupiaki,
         orzechy,
-        orzechyZiemne,
         soja,
         sezam,
-        dwutlenekSiarki,
         gorczyca,
         łubin,
         seler,
         mięczaki,
     }
 
-    public struct SAlergen
+    public class SAlergen
     {
         ERodzajAlergenu nazwa;
         double cena;
+        bool wybrane;
 
 
         public SAlergen(ERodzajAlergenu nazwa, double cena)
         {
-            this.nazwa = nazwa;
-            this.cena = cena;
+            this.Nazwa = nazwa;
+            this.Cena = cena;
+            Wybrane = false;
         }
+
+        public bool Wybrane { get => wybrane; set => wybrane = value; }
+        public double Cena { get => cena; set => cena = value; }
+        public ERodzajAlergenu Nazwa { get => nazwa; set => nazwa = value; }
     }
 
     public class Dieta
