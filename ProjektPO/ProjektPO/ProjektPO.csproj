@@ -50,6 +50,7 @@
     <Compile Include="Pracownik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WronPESELExcepition.cs" />
     <Compile Include="Zamowienie.cs" />
     <Compile Include="Zespol.cs" />
   </ItemGroup>
