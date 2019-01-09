@@ -12,7 +12,7 @@ namespace Projekt
     {
         M, K
     }
-    class Osoba
+    abstract class Osoba
     {
         string imie;
         string nazwisko;
