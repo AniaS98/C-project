@@ -10,7 +10,7 @@ namespace Projekt
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Błagam, działaj");
+            Console.WriteLine("Yay, działa");
 
 
 
