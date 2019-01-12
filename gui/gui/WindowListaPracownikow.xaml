@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:gui"
         mc:Ignorable="d"
-        Title="Lista pracownikow" Height="450" Width="800">
+        Title="Lista pracowników" Height="450" Width="800">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -13,7 +13,9 @@
                 <GradientStop Color="#FF1A5187" Offset="0.103"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="Wybierz pracownika z listy: " HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.481,0.364" Margin="174,31,0,0" FontSize="30"  Cursor="Arrow" FontFamily="Segoe UI Black" Width="480" Foreground="White"/>
-        <ListBox HorizontalAlignment="Left" Height="182" VerticalAlignment="Top" Width="563" Margin="130,106,0,0" SelectionChanged="ListBox_SelectionChanged"/>
+        <Label Content="Wybierz pracownika z listy: " HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.481,0.364" Margin="188,33,0,0" FontSize="30"  Cursor="Arrow" FontFamily="Segoe UI Black" Width="480" Foreground="White"/>
+        <ListBox HorizontalAlignment="Left" Height="182" VerticalAlignment="Top" Width="563" Margin="130,106,0,0" SelectionChanged="Lista"/>
+        <Button Content="Dodaj pracownika" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" FontSize="14" FontFamily="Segoe UI Semibold" Margin="164,325,0,0" Height="25" Click="Dodaj"/>
+        <Button Content="Dalej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" FontSize="14" FontFamily="Segoe UI Semibold" Margin="578,325,0,0" Height="25" Click="Dalej"/>
     </Grid>
 </Window>

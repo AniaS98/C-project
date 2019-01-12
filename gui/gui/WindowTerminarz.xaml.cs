@@ -14,20 +14,13 @@ using System.Windows.Shapes;
 namespace gui
 {
     /// <summary>
-    /// Logika interakcji dla klasy WindowLogin.xaml
+    /// Logika interakcji dla klasy WindowTerminarz.xaml
     /// </summary>
-    public partial class WindowLogin : Window
+    public partial class WindowTerminarz : Window
     {
-        public WindowLogin()
+        public WindowTerminarz()
         {
             InitializeComponent();
-        }
-
-        private void Zaloguj(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-            WindowListaPracownikow okno = new WindowListaPracownikow();
-            okno.ShowDialog();
         }
 
         private void Powrot(object sender, RoutedEventArgs e)
