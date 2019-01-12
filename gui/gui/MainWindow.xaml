@@ -1,0 +1,24 @@
+﻿<Window x:Class="gui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gui"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Color x:Key="Color1">#FF5673D9</Color>
+    </Window.Resources>
+    <Grid Background="#FFB5D7EA">
+        <Button Content="Klient" HorizontalAlignment="Left" Height="48
+                " Margin="139,181,0,0" VerticalAlignment="Top" Width="487" FontSize="28" FontFamily="Global Serif" Background="#FF70A8D6"/>
+        <Button Content="Pracownik" HorizontalAlignment="Left" Height="48" Margin="139,268,0,0" VerticalAlignment="Top" Width="487" FontSize="28" FontFamily="Global Serif" Background="#FF70A8D6">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource Color1}"/>
+            </Button.BorderBrush>
+        </Button>
+        <Label Content="?Najlepsze diety?&#xD;&#xA;" HorizontalAlignment="Center" Height="74" Margin="256,47,228,298" VerticalAlignment="Center" Width="308" FontSize="36" FontFamily="Viner Hand ITC"/>
+        <Label Content="Firma cateringowa " Margin="322,126,0,264" Width="134" FontSize="16" FontFamily="Global Serif" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+    </Grid>
+</Window>
