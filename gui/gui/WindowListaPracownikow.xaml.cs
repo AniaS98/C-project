@@ -9,26 +9,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace gui
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy WindowListaPracownikow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WindowListaPracownikow : Window
     {
-        public MainWindow()
+        public WindowListaPracownikow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
-            WindowLogin okno = new WindowLogin();
-            okno.ShowDialog();
 
         }
     }

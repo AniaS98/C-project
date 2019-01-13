@@ -9,27 +9,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace gui
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy WindowLogin.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WindowLogin : Window
     {
-        public MainWindow()
+        public WindowLogin()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            WindowLogin okno = new WindowLogin();
-            okno.ShowDialog();
-
+            this.Close();
         }
     }
 }

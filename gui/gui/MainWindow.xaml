@@ -6,23 +6,19 @@
         xmlns:local="clr-namespace:gui"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Window.Resources>
-        <Color x:Key="Color1">#FF5673D9</Color>
-    </Window.Resources>
-    <Grid Background="#FFB5D7EA">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="383*"/>
-            <ColumnDefinition Width="409*"/>
-        </Grid.ColumnDefinitions>
-        <Button Content="Klient" HorizontalAlignment="Left" Height="48
-                " Margin="139,181,0,0" VerticalAlignment="Top" Width="487" FontSize="28" FontFamily="Global Serif" Background="#FF70A8D6" Grid.ColumnSpan="2" Click="Button_Click"/>
-        <Button Content="Pracownik" HorizontalAlignment="Left" Height="48" Margin="139,268,0,0" VerticalAlignment="Top" Width="487" FontSize="28" FontFamily="Global Serif" Background="#FF70A8D6" Grid.ColumnSpan="2">
-            <Button.BorderBrush>
-                <SolidColorBrush Color="{DynamicResource Color1}"/>
-            </Button.BorderBrush>
-        </Button>
-        <Label Content="?Najlepsze diety?&#xD;&#xA;" HorizontalAlignment="Center" Height="74" Margin="256,47,228,298" VerticalAlignment="Center" Width="308" FontSize="36" FontFamily="Viner Hand ITC" Grid.ColumnSpan="2"/>
-        <Label Content="Firma cateringowa " Margin="322,126,0,257" Width="134" FontSize="16" FontFamily="Global Serif" VerticalAlignment="Center" HorizontalAlignment="Left" Height="36" Grid.ColumnSpan="2"/>
+  <Window.Resources>
+    <Color x:Key="Color1">#FF5673D9</Color>
+  </Window.Resources>
+  <Grid Background="#FFB5D7EA">
+    <Button Content="Klient" HorizontalAlignment="Left" Height="48
+                " Margin="139,181,0,0" VerticalAlignment="Top" Width="487" FontSize="28" FontFamily="Global Serif" Background="#FF70A8D6"/>
+    <Button Content="Pracownik" HorizontalAlignment="Left" Height="48" Margin="139,268,0,0" VerticalAlignment="Top" Width="487" FontSize="28" FontFamily="Global Serif" Background="#FF70A8D6" Click="Pracownik">
+      <Button.BorderBrush>
+        <SolidColorBrush Color="{DynamicResource Color1}"/>
+      </Button.BorderBrush>
+    </Button>
+    <Label Content="?Najlepsze diety?&#xD;&#xA;" HorizontalAlignment="Center" Height="74" Margin="256,47,228,298" VerticalAlignment="Center" Width="308" FontSize="36" FontFamily="Viner Hand ITC"/>
+    <Label Content="Firma cateringowa " Margin="322,126,0,264" Width="134" FontSize="16" FontFamily="Global Serif" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-    </Grid>
+  </Grid>
 </Window>
