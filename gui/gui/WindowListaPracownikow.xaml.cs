@@ -23,9 +23,20 @@ namespace gui
             InitializeComponent();
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Lista(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Dodaj(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Dalej(object sender, RoutedEventArgs e)
+        {
+            WindowTerminarz okno = new WindowTerminarz();
+            okno.ShowDialog();
         }
     }
 }

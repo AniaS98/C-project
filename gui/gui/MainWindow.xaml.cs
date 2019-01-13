@@ -24,7 +24,7 @@ namespace gui
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Pracownik(object sender, RoutedEventArgs e)
         {
 
             WindowLogin okno = new WindowLogin();
