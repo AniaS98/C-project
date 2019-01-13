@@ -52,6 +52,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="WindowKlient.xaml.cs">
+      <DependentUpon>WindowKlient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowKlientAlergeny.xaml.cs">
+      <DependentUpon>WindowKlientAlergeny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowKlientZamowienie.xaml.cs">
+      <DependentUpon>WindowKlientZamowienie.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowListaPracownikow.xaml.cs">
       <DependentUpon>WindowListaPracownikow.xaml</DependentUpon>
     </Compile>
@@ -73,6 +82,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WindowKlient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowKlientAlergeny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowKlientZamowienie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowListaPracownikow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="gui.WindowKlientZamowienie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gui"
+        mc:Ignorable="d"
+        Title="WindowKlientZamowienie" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FFD4EE62" Offset="1"/>
+                <GradientStop Color="#FFB2F779" Offset="0.504"/>
+                <GradientStop Color="#FFB2F779" Offset="0.5"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Dieta:" HorizontalAlignment="Left" Margin="61,10,0,0" VerticalAlignment="Top" Height="57" Width="244" FontSize="24" FontFamily="Global User Interface" FontWeight="Bold" FontStyle="Italic"/>
+        <RadioButton Content="Podstawowa" HorizontalAlignment="Left" Height="30" Margin="61,72,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold"/>
+        <RadioButton Content="Wegetariańska" HorizontalAlignment="Left" Height="30" Margin="61,117,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold"/>
+        <RadioButton Content="Wegańska" HorizontalAlignment="Left" Height="30" Margin="61,166,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold"/>
+        <RadioButton Content="Bezlaktozowa" HorizontalAlignment="Left" Height="30" Margin="61,212,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold"/>
+        <RadioButton Content="Bezglutenowa" HorizontalAlignment="Left" Height="30" Margin="61,260,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold"/>
+        <Button Content="Wstecz" HorizontalAlignment="Left" Height="39" Margin="61,325,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Wstecz"/>
+        <Button Content="Dalej" HorizontalAlignment="Left" Height="39" Margin="484,325,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Dalej"/>
+    </Grid>
+</Window>
