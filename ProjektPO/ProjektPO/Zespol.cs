@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 namespace Projekt
 {
     [Serializable]
-    class Zespol
+    internal class Zespol
     {
-        int liczbaPracownikow;
-        string nazwa; //Chyba nie musi być nazwy
-        List<Pracownik> pracownicy;
-        List<int> indeksyDaty;
-        List<int> indeksy;
+        public int liczbaPracownikow;
+        public string nazwa; //Chyba nie musi być nazwy
+        public List<Pracownik> pracownicy;
+        public List<int> indeksyDaty;
+        public List<int> indeksy;
 
         public string Nazwa { get => nazwa; set => nazwa = value; }
-        internal List<Pracownik> Pracownicy { get => pracownicy; set => pracownicy = value; }
+        public List<Pracownik> Pracownicy { get => pracownicy; set => pracownicy = value; }
         public int LiczbaPracownikow { get => liczbaPracownikow; set => liczbaPracownikow = value; }
 
+      
         public Zespol()
         {
             liczbaPracownikow = 0;

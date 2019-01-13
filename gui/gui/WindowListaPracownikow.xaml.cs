@@ -18,25 +18,31 @@ namespace gui
     /// </summary>
     public partial class WindowListaPracownikow : Window
     {
+       
         public WindowListaPracownikow()
         {
             InitializeComponent();
-        }
-
-        private void Lista(object sender, SelectionChangedEventArgs e)
-        {
-
+       
         }
 
         private void Dodaj(object sender, RoutedEventArgs e)
         {
-
+            //Pracownik p = new Pracownik();
+            //OsobaWindow okno = new OsobaWindow(cz);
+           // okno.ShowDialog();
+            //zespol.DodajPracownika(p);
+            //lista.Add(p); 
         }
 
         private void Dalej(object sender, RoutedEventArgs e)
         {
             WindowTerminarz okno = new WindowTerminarz();
             okno.ShowDialog();
+        }
+
+        private void Lista(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
