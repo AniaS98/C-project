@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projekt
 {
-    class MenuDieta : Dieta
+    class MenuDieta : Dieta, ICloneable
     {
         List<Dieta> menu;
 
@@ -106,6 +106,18 @@ namespace Projekt
             Menu.Add(bezglutenowa);
         }
 
+        public object Clone()
+        {
+            MenuDieta kopia = new MenuDieta();
+            kopia.menu = new List<Dieta>();
+
+            foreach (Dieta d in menu)
+            {
+                kopia.menu.Add(d.Clone1());
+            }
+
+            return kopia;
+        }
 
     }
 }

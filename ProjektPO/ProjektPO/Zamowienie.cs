@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projekt
 {
-    class Zamowienie
+    class Zamowienie : ICloneable, IComparable<Zamowienie>
     {
         string numerZamowienia;
         DateTime dataRozpoczeciaZamowienia;
@@ -117,6 +117,16 @@ namespace Projekt
             }
             Console.WriteLine(cenaKoncowa);
             return cenaKoncowa;
+        }
+
+        public object Clone()
+        {
+            return new Zamowienie(dataRozpoczeciaZamowienia, dataKoncaZamowienia, (Adres)Adres.Clone(), wybranaDieta.Clone1(), (MenuDieta)menuWybor.Clone());
+        }
+
+        public int CompareTo(Zamowienie z)
+        {
+            return numerZamowienia.CompareTo(z.numerZamowienia);
         }
 
     }

@@ -12,7 +12,7 @@ namespace Projekt
     {
         M, K
     }
-    abstract class Osoba
+    abstract class Osoba : ICloneable, IComparable<Osoba>
     {
         string imie;
         string nazwisko;
@@ -45,6 +45,26 @@ namespace Projekt
         public override string ToString()
         {
             return imie + " " + nazwisko + " " + pesel + " " + " " + plec;
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
+        }
+
+        public int CompareTo(Osoba o)
+        {
+            if (o == null) return 1;
+
+            if (nazwisko == o.nazwisko)
+            {
+                if (imie == o.imie)
+                {
+                    return pesel.CompareTo(o.pesel);
+                }
+                return imie.CompareTo(o.imie);
+            }
+            return nazwisko.CompareTo(o.nazwisko);
         }
     }
 }

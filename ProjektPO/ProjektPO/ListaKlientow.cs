@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    class ListaKlientow
+    class ListaKlientow : ICloneable, IComparable<ListaKlientow>
     {
         int LiczbaKlientow;
         string nazwa;
@@ -45,6 +45,29 @@ namespace Projekt
                     return;
                 }
             }
+        }
+
+        public object Clone()
+        {
+            ListaKlientow kopia = new ListaKlientow(nazwa, new List<Klient>(), LiczbaKlientow);
+
+            foreach (Klient k in klienci)
+            {
+                kopia.klienci.Add(k);
+            }
+
+            return kopia;
+        }
+
+        public int CompareTo(ListaKlientow k)
+        {
+            if (k == null) return 1;
+
+            if (LiczbaKlientow1 == k.LiczbaKlientow1)
+            {
+                return LiczbaKlientow1.CompareTo(k.LiczbaKlientow1);
+            }
+            return nazwa.CompareTo(k.nazwa);
         }
 
     }

@@ -49,7 +49,7 @@ namespace Projekt
         public ERodzajAlergenu Nazwa { get => nazwa; set => nazwa = value; }
     }
 
-    public class Dieta
+    public class Dieta : ICloneable, IComparable<Dieta>
     {
         ERodzajeDiet typ;
         double cena;
@@ -74,6 +74,40 @@ namespace Projekt
             this.alergeny = alergeny;
         }
 
+        public object Clone()
+        {
+            Dieta kopia = new Dieta(typ, cena, new List<SAlergen>());
+
+            foreach (SAlergen a in alergeny)
+            {
+                kopia.alergeny.Add(a);
+            }
+
+            return kopia;
+        }
+
+        internal Dieta Clone1()
+        {
+            Dieta kopia = new Dieta(typ, cena, new List<SAlergen>());
+
+            foreach (SAlergen a in alergeny)
+            {
+                kopia.alergeny.Add(a);
+            }
+
+            return kopia;
+        }
+
+        public int CompareTo(Dieta d)
+        {
+            if (d == null) return 1;
+
+            if (typ == d.typ)
+            {
+                return alergeny.Count.CompareTo(d.alergeny.Count);
+            }
+            return typ.CompareTo(d.typ);
+        }
 
     }
 

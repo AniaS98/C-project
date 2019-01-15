@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projekt
 {
-    class Adres
+    class Adres : ICloneable, IComparable<Adres>
     {
         string ulica;
         string numerDomu;
@@ -60,6 +60,30 @@ namespace Projekt
         {
             string s = "ul. " + Ulica + " " + NumerDomu + "/" + NumerMieszkania + ", " + KodPocztowy + " " + Miasto1;
             return s;
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
+        }
+
+        public int CompareTo(Adres a)
+        {
+            if (a == null) return 1;
+
+            if (Miasto == a.Miasto)
+            {
+                if (ulica == a.ulica)
+                {
+                    if (numerDomu == a.numerDomu)
+                    {
+                        return numerMieszkania.CompareTo(a.numerMieszkania);
+                    }
+                    return numerDomu.CompareTo(a.numerDomu);
+                }
+                return ulica.CompareTo(a.Ulica);
+            }
+            return Miasto.CompareTo(a.Miasto);
         }
     }
 }
