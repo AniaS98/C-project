@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace gui
 {
@@ -19,9 +20,15 @@ namespace gui
     public partial class WindowListaPracownikow : Window
     {
        
+        Zespol zespol = new Zespol();
+        ObservableCollection <Pracownik> lista;
+
         public WindowListaPracownikow()
         {
             InitializeComponent();
+            lista = new ObservableCollection<Pracownik>();
+            //dieta = (Dieta)Dieta.OdczytajXML("dieta2.xml"); //tu właściwa ścieżka!
+           
        
         }
 
