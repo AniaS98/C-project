@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
+    [Serializable]
     class ListaKlientow : ICloneable, IComparable<ListaKlientow>
     {
         int LiczbaKlientow;
@@ -25,7 +26,9 @@ namespace Projekt
 
         public ListaKlientow(string nazwa, List<Klient> klienci, int LiczbaKlientow)
         {
-            
+            this.nazwa = nazwa;
+            this.LiczbaKlientow = LiczbaKlientow;
+            this.klienci = klienci;
         }
 
         public void DodajPracownika(Klient k)

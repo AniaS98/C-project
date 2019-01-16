@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Projekt
 {
+    [Serializable]
     class Zamowienie : ICloneable, IComparable<Zamowienie>
     {
         string numerZamowienia;
