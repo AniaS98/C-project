@@ -32,7 +32,7 @@ namespace gui
        
         }
 
-        public void Dodaj(object sender, RoutedEventArgs e)
+       public  void Dodaj(object sender, RoutedEventArgs e)
         {
             //Pracownik p = new Pracownik();
             //OsobaWindow okno = new OsobaWindow(cz);

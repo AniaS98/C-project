@@ -9,7 +9,7 @@ namespace Projekt
 {
     [Serializable]
     [XmlRoot("Zespol")]
-    class Zespol
+    public class Zespol
     {
         public int liczbaPracownikow;
         public string nazwa; //Chyba nie musi być nazwy

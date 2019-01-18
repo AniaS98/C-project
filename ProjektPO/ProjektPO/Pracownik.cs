@@ -9,7 +9,7 @@ namespace Projekt
 {
     [Serializable]
     [XmlRoot("Pracownik")]
-    class Pracownik : Osoba
+    public class Pracownik : Osoba
     {
         public List<string>[] terminarz = new List<string>[366];
         public DateTime[] kalendarz = new DateTime[366]; //Tu ni dałam getów setów, ale jak nie działą to dodajcie :)
@@ -26,7 +26,7 @@ namespace Projekt
             }
         }
 
-        public Pracownik(string imie, string nazwisko, string pesel, Plcie plec, List<string>[] terminarz) : base(imie, nazwisko, pesel, plec)
+        Pracownik(string imie, string nazwisko, string pesel, Plcie plec, List<string>[] terminarz) : base(imie, nazwisko, pesel, plec)
         {
             this.terminarz = terminarz;
 
