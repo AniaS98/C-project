@@ -16,7 +16,6 @@ namespace Projekt
         bezlaktozowa,
         bezglutenowa
     }
-    
 
     public enum ERodzajAlergenu
     {
