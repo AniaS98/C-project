@@ -130,5 +130,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ProjektPO\ProjektPO\ProjektPO.csproj">
+      <Project>{3222d3c5-4044-4183-8d49-ce62dc3cf6c3}</Project>
+      <Name>ProjektPO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
