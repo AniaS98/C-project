@@ -26,7 +26,7 @@ namespace Projekt
         {
             get
             {
-                return pesel;
+                return pesel; 
             }
 
             set
