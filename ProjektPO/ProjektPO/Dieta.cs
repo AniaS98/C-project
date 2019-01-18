@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
+        /// <summary>
+        /// komentarz....
+        /// </summary>
+
 namespace Projekt
 {
     public enum ERodzajeDiet
@@ -12,6 +16,7 @@ namespace Projekt
         bezlaktozowa,
         bezglutenowa
     }
+    
 
     public enum ERodzajAlergenu
     {
