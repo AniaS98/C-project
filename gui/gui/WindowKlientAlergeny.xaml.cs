@@ -32,5 +32,15 @@ namespace gui
             //lista = new ObservableCollection<SAlergen>(dieta.ERodzajAlergenu);
 
         }
+
+        private void Button_Wstecz(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Dalej(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

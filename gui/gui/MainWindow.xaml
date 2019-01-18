@@ -35,7 +35,7 @@
                 </LinearGradientBrush>
             </Button.Background>
             <Button.BorderBrush>
-                <SolidColorBrush Color="{DynamicResource Color1}"/>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.WindowFrameColorKey}}"/>
             </Button.BorderBrush>
         </Button>
         <Label Content="Firma cateringowa " Margin="176,51,0,265" Width="510" FontSize="56" FontFamily="Harlow Solid Italic" VerticalAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold" Foreground="White" Height="103"/>
