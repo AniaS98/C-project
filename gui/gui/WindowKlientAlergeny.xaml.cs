@@ -19,7 +19,7 @@ namespace gui
     /// <summary>
     /// Logika interakcji dla klasy WindowKlientAlergeny.xaml
     /// </summary>
-    public partial class WindowKlientAlergeny : Window
+    partial class WindowKlientAlergeny : Window
     {
         Projekt.Dieta dieta = new Projekt.Dieta();
         ObservableCollection<SAlergen> lista;

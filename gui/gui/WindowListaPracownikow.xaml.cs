@@ -18,12 +18,12 @@ namespace gui
     /// <summary>
     /// Logika interakcji dla klasy WindowListaPracownikow.xaml
     /// </summary>
-    public partial class WindowListaPracownikow : Window
+    partial class WindowListaPracownikow : Window
     {
-        Zespol zespol = new Zespol();
-        ObservableCollection <Pracownik> lista;
-
-        public WindowListaPracownikow()
+        public Zespol zespol = new Zespol();
+        public ObservableCollection <Pracownik> lista;
+        
+        WindowListaPracownikow()
         {
             //InitializeComponent();
             //lista = new ObservableCollection<Zespol>();
@@ -32,7 +32,7 @@ namespace gui
        
         }
 
-        private void Dodaj(object sender, RoutedEventArgs e)
+        public void Dodaj(object sender, RoutedEventArgs e)
         {
             //Pracownik p = new Pracownik();
             //OsobaWindow okno = new OsobaWindow(cz);
@@ -41,13 +41,13 @@ namespace gui
             //lista.Add(p); 
         }
 
-        private void Dalej(object sender, RoutedEventArgs e)
+        public void Dalej(object sender, RoutedEventArgs e)
         {
             WindowTerminarz okno = new WindowTerminarz();
             okno.ShowDialog();
         }
 
-        private void Lista(object sender, SelectionChangedEventArgs e)
+        public void Lista(object sender, SelectionChangedEventArgs e)
         {
 
         }
