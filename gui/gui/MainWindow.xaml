@@ -6,19 +6,39 @@
         xmlns:local="clr-namespace:gui"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-  <Window.Resources>
-    <Color x:Key="Color1">#FF5673D9</Color>
-  </Window.Resources>
-  <Grid Background="#FFB5D7EA">
-    <Button Content="Klient" HorizontalAlignment="Left" Height="48
-                " Margin="139,181,0,0" VerticalAlignment="Top" Width="487" FontSize="28" FontFamily="Global Serif" Background="#FF70A8D6" Click="Klient"/>
-        <Button Content="Pracownik" HorizontalAlignment="Left" Height="48" Margin="139,268,0,0" VerticalAlignment="Top" Width="487" FontSize="28" FontFamily="Global Serif" Background="#FF70A8D6" Click="Pracownik">
+    <Window.Resources>
+        <Color x:Key="Color1">#FF5673D9</Color>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF1D2464" Offset="1"/>
+                <GradientStop Color="#FFA0E84A"/>
+                <GradientStop Color="#FF202863" Offset="1"/>
+                <GradientStop Color="#FF202862" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Content="Klient" HorizontalAlignment="Left" Height="48
+                " Margin="176,181,0,0" VerticalAlignment="Top" Width="487" FontSize="28" FontFamily="Calibri" Click="Klient" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF30550A" Offset="1"/>
+                    <GradientStop Color="#FFADEA6F"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Pracownik" HorizontalAlignment="Left" Height="48" Margin="176,268,0,0" VerticalAlignment="Top" Width="487" FontSize="28" FontFamily="Calibri Light" Click="Pracownik" Foreground="White" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FF0835CD"/>
+                </LinearGradientBrush>
+            </Button.Background>
             <Button.BorderBrush>
                 <SolidColorBrush Color="{DynamicResource Color1}"/>
             </Button.BorderBrush>
         </Button>
-        <Label Content="Najlepsze diety&#xD;&#xA;" HorizontalAlignment="Center" Height="74" Margin="256,47,228,298" VerticalAlignment="Center" Width="308" FontSize="36" FontFamily="Viner Hand ITC"/>
-        <Label Content="Firma cateringowa " Margin="322,126,0,264" Width="134" FontSize="16" FontFamily="Global Serif" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <Label Content="Firma cateringowa " Margin="176,51,0,265" Width="510" FontSize="56" FontFamily="Harlow Solid Italic" VerticalAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold" Foreground="White" Height="103"/>
 
-  </Grid>
+    </Grid>
 </Window>

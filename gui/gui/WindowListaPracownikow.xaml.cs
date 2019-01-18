@@ -20,13 +20,13 @@ namespace gui
     /// </summary>
     public partial class WindowListaPracownikow : Window
     {
-        Zespol zespol = new Zespol();
-        ObservableCollection <Pracownik> lista;
+        //Zespol zespol = new Zespol();
+        //ObservableCollection <Zespol> lista;
 
         public WindowListaPracownikow()
         {
-            InitializeComponent();
-            lista = new ObservableCollection<Pracownik>();
+            //InitializeComponent();
+            //lista = new ObservableCollection<Zespol>();
             //dieta = (Dieta)Dieta.OdczytajXML("dieta2.xml"); //tu właściwa ścieżka!
            
        

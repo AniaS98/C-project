@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Projekt;
 
 namespace gui
 {
@@ -19,15 +20,15 @@ namespace gui
     /// </summary>
     public partial class WindowKlientAlergeny : Window
     {
-        Dieta dieta = new Dieta();
+        Projekt.Dieta dieta = new Projekt.Dieta();
         ObservableCollection<SAlergen> lista;
 
         public WindowKlientAlergeny()
         {
             InitializeComponent();
             lista = new ObservableCollection<SAlergen>();
-            dieta = (Dieta)Dieta.OdczytajXML("dieta2.xml"); //tu właściwa ścieżka!
-            lista = new ObservableCollection<SAlergen>(dieta.ERodzajAlergenu);
+            //dieta = (Dieta)Dieta.OdczytajXML("dieta2.xml"); //tu właściwa ścieżka!
+            //lista = new ObservableCollection<SAlergen>(dieta.ERodzajAlergenu);
 
         }
     }
