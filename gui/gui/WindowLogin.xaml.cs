@@ -28,8 +28,8 @@ namespace gui
         public  void Zaloguj(object sender, RoutedEventArgs e)
         {
             this.Close();
-            WindowListaPracownikow okno = new WindowListaPracownikow();
-            okno.ShowDialog();
+            //WindowListaPracownikow okno = new WindowListaPracownikow();
+           // okno.ShowDialog();
         }
 
         private void Powrot(object sender, RoutedEventArgs e)
