@@ -16,6 +16,7 @@ namespace Projekt
         bezlaktozowa,
         bezglutenowa
     }
+    
 
     public enum ERodzajAlergenu
     {
@@ -89,7 +90,7 @@ namespace Projekt
 
             return kopia;
         }
-
+        
         internal Dieta Clone1()
         {
             Dieta kopia = new Dieta(typ, cena, new List<SAlergen>());
