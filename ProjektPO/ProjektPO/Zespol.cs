@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Projekt
 {
     [Serializable]
-    //[XmlRoot("Zespol")]
+    [XmlRoot("Zespol")]
     class Zespol
     {
         public int liczbaPracownikow;
@@ -20,7 +21,7 @@ namespace Projekt
         public List<Pracownik> Pracownicy { get => pracownicy; set => pracownicy = value; }
         public int LiczbaPracownikow { get => liczbaPracownikow; set => liczbaPracownikow = value; }
 
-      
+
         public Zespol()
         {
             liczbaPracownikow = 0;

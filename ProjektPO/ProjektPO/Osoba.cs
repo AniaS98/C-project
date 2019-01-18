@@ -14,10 +14,10 @@ namespace Projekt
     }
     abstract class Osoba : ICloneable, IComparable<Osoba>
     {
-        string imie;
-        string nazwisko;
-        string pesel;
-        Plcie plec;
+        public string imie;
+        public string nazwisko;
+        public string pesel;
+        public Plcie plec;
 
 
         public string Imie { get => imie; set => imie = value; }
