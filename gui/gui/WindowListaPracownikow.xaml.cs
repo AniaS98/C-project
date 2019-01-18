@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using Projekt;
 
 namespace gui
 {
@@ -19,7 +20,6 @@ namespace gui
     /// </summary>
     public partial class WindowListaPracownikow : Window
     {
-       
         Zespol zespol = new Zespol();
         ObservableCollection <Pracownik> lista;
 

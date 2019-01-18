@@ -17,7 +17,7 @@
                 <SolidColorBrush Color="{DynamicResource Color1}"/>
             </Button.BorderBrush>
         </Button>
-        <Label Content="?Najlepsze diety?&#xD;&#xA;" HorizontalAlignment="Center" Height="74" Margin="256,47,228,298" VerticalAlignment="Center" Width="308" FontSize="36" FontFamily="Viner Hand ITC"/>
+        <Label Content="Najlepsze diety&#xD;&#xA;" HorizontalAlignment="Center" Height="74" Margin="256,47,228,298" VerticalAlignment="Center" Width="308" FontSize="36" FontFamily="Viner Hand ITC"/>
         <Label Content="Firma cateringowa " Margin="322,126,0,264" Width="134" FontSize="16" FontFamily="Global Serif" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
   </Grid>
