@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace Projekt
 {
     [Serializable]
-    [XmlRoot("Zespol")]
-    public class Zespol
+    //[XmlRoot("Zespol")]
+    class Zespol
     {
         public int liczbaPracownikow;
         public string nazwa; //Chyba nie musi być nazwy

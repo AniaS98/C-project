@@ -61,7 +61,7 @@ namespace Projekt
             }
 
             Console.WriteLine("Wybierz numer diety: ");
-            if (Int32.TryParse(Console.ReadLine(), out n)) ;
+            if (Int32.TryParse(Console.ReadLine(), out n)) 
             {
                 if (n > 0 && n < pozycja)
                     WybranaDieta = MenuWybor.Menu[n - 1];
@@ -89,7 +89,7 @@ namespace Projekt
 
             do
             {
-                if (Int32.TryParse(Console.ReadLine(), out n)) ;
+                if (Int32.TryParse(Console.ReadLine(), out n)) 
                 {
                     if (n > 0 && n < pozycja)
                         WybranaDieta.Alergeny[n - 1].Wybrane = true;
