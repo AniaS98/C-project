@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 namespace Projekt
 {
     [Serializable]
-    enum Plcie
+    public enum Plcie
     {
         M, K
     }
-    abstract class Osoba : ICloneable, IComparable<Osoba>
+    public abstract class Osoba : ICloneable, IComparable<Osoba>
     {
         public string imie;
         public string nazwisko;
