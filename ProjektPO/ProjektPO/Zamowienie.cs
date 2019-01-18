@@ -106,6 +106,7 @@ namespace Projekt
 
         /// <summary>
         /// Funkcja obliczająca cenę końcową zamówienia = cena wybranej diety + ceny wybranych alergenów
+        /// </summary>
         public double CenaKoncowa()
        
         {
