@@ -61,6 +61,9 @@
     <Compile Include="WindowKlientAlergeny.xaml.cs">
       <DependentUpon>WindowKlientAlergeny.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowPodsumowanieZamowienia.xaml.cs">
+      <DependentUpon>WindowPodsumowanieZamowienia.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowKlientZamowienie.xaml.cs">
       <DependentUpon>WindowKlientZamowienie.xaml</DependentUpon>
     </Compile>
@@ -69,6 +72,12 @@
     </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowKlientKoniec.xaml.cs">
+      <DependentUpon>WindowKlientKoniec.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowSzczegolyZamowienia.xaml.cs">
+      <DependentUpon>WindowSzczegolyZamowienia.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowTerminarz.xaml.cs">
       <DependentUpon>WindowTerminarz.xaml</DependentUpon>
@@ -93,6 +102,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WindowPodsumowanieZamowienia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowKlientZamowienie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +117,14 @@
     <Page Include="WindowLogin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WindowKlientKoniec.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowSzczegolyZamowienia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowTerminarz.xaml">
       <SubType>Designer</SubType>

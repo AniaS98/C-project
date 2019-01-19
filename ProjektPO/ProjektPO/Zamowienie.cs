@@ -87,7 +87,7 @@ namespace Projekt
                 Console.WriteLine(s);
             }
             
-            Console.WriteLine("Wybierz numer alergentu: ");
+            Console.WriteLine("Wybierz numer alergenu: ");
 
             do
             {

@@ -28,7 +28,6 @@ namespace gui
 
         private void Pracownik(object sender, RoutedEventArgs e)
         {
-
             WindowLogin okno = new WindowLogin();
             okno.ShowDialog();
 
@@ -38,7 +37,6 @@ namespace gui
         {
             WindowKlient okno = new WindowKlient();
             okno.ShowDialog();
-
         }
     }
 }

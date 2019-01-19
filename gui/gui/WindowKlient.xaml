@@ -13,14 +13,14 @@
                 <GradientStop Color="#FF6CC378"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox HorizontalAlignment="Left" Height="36" Margin="367,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374"/>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="367,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" TextChanged="TextBox_Imie"/>
         <Label Content="Panel Klienta" HorizontalAlignment="Left" Height="28" Margin="320,10,0,0" VerticalAlignment="Top" Width="152" FontFamily="Global User Interface" FontSize="18" FontWeight="Bold" FontStyle="Italic" Foreground="#FF133A0C"/>
         <Label Content="Imię" HorizontalAlignment="Left" Height="36" Margin="65,56,0,0" VerticalAlignment="Top" Width="184" FontFamily="Global User Interface" FontSize="16"/>
         <Label Content="Nazwisko" HorizontalAlignment="Left" Height="33" Margin="65,112,0,0" VerticalAlignment="Top" Width="184" FontFamily="Global User Interface" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Height="33" Margin="367,112,0,0" VerticalAlignment="Top" Width="374"/>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="367,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" TextChanged="TextBox_Nazwisko"/>
         <Label Content="PESEL" HorizontalAlignment="Left" Height="33" Margin="65,169,0,0" VerticalAlignment="Top" Width="184" FontFamily="Global User Interface" FontSize="16"/>
         <TextBox HorizontalAlignment="Left" Height="33" Margin="367,169,0,0"
-                 VerticalAlignment="Top" Width="374"/>
+                 VerticalAlignment="Top" Width="374" TextChanged="TextBox_PESEL"/>
         <Button Content="Wstecz" HorizontalAlignment="Left" Height="39" Margin="65,286,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Wstecz"/>
         <Button Content="Dalej" HorizontalAlignment="Left" Height="39" Margin="491,286,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Dalej"/>
     </Grid>

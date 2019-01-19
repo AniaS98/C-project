@@ -26,12 +26,14 @@ namespace gui
 
         private void Button_Wstecz(object sender, RoutedEventArgs e)
         {
+            this.Close();
             WindowKlient okno = new WindowKlient();
             okno.ShowDialog();
         }
 
         private void Button_Dalej(object sender, RoutedEventArgs e)
         {
+            this.Close();
             WindowKlientAlergeny okno = new WindowKlientAlergeny();
             okno.ShowDialog();
         }
