@@ -81,7 +81,7 @@ namespace Projekt
         }
 
 /// <summary>  
-/// Funkcja pozwalająca 
+/// Ta funkcja rezerwuje datę zamówienia, w przypadku braku miejsca w terminarzu zwrócić false
 /// </summary>  
         public void ZlozenieZamowienia(DateTime dataPoczatkowa, DateTime dataKoncowa, string z)
         {
