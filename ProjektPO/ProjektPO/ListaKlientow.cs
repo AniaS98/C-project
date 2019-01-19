@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Media;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +14,7 @@ namespace Projekt
 /// </summary> 
 
     [Serializable]
-    class ListaKlientow : ICloneable, IComparable<ListaKlientow>
+    class ListaKlientow : ICloneable, IComparable<ListaKlientow>, ISerializowalnaJSON
     {
         int LiczbaKlientow;
         string nazwa;
@@ -83,5 +86,32 @@ namespace Projekt
             return nazwa.CompareTo(k.nazwa);
         }
 
+        public void ZapiszJSON(string nazwaPliku)
+        {
+            DataContractJsonSerializer jsonSerializer = new DataContractJsonSerializer(typeof(ListaKlientow));
+            using (var fstream = File.Create(nazwaPliku))
+            {
+                jsonSerializer.WriteObject(fstream, this);
+            }
+        }
+
+        public static ListaKlientow OdczytajJSON(string nazwaPliku)
+        {
+            try
+            {
+                FileStream fstream = new FileStream(nazwaPliku, FileMode.Open);
+                DataContractJsonSerializer jsonSerializer = new DataContractJsonSerializer(typeof(ListaKlientow));
+                fstream.Position = 0;
+                ListaKlientow lk = (ListaKlientow)jsonSerializer.ReadObject(fstream);
+                fstream.Close();
+                return lk;
+            }
+            catch (FileNotFoundException)
+            {
+                SystemSounds.Exclamation.Play();
+                Console.WriteLine("Plik o padanej nazwie ({0}) nie istnieje", nazwaPliku);
+            }
+            return null;
+        }
     }
 }

@@ -16,6 +16,8 @@ namespace Projekt
     {
         M, K
     }
+
+    [Serializable]
     public abstract class Osoba : ICloneable, IComparable<Osoba>
     {
         public string imie;

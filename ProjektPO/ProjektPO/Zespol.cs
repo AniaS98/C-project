@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Media;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
@@ -15,7 +18,7 @@ namespace Projekt
 
     [Serializable]
     [XmlRoot("Zespol")]
-    public class Zespol
+    public class Zespol : ISerializowalnaJSON
     {
         public int liczbaPracownikow;
         public string nazwa; 
@@ -35,9 +38,9 @@ namespace Projekt
             pracownicy = new List<Pracownik>();
         }
 
-        public Zespol(string nazwa)
+        public Zespol(string nazwa) : this()
         {
-
+            this.nazwa = nazwa;
         }//Nie wiem czy to zostawić - pracownikow się doda w programie (?)
 
         public void DodajPracownika(Pracownik p)
@@ -128,7 +131,33 @@ namespace Projekt
 
         }
 
+        public void ZapiszJSON(string nazwaPliku)
+        {
+            DataContractJsonSerializer jsonSerializer = new DataContractJsonSerializer(typeof(Zespol));
+            using (var fstream = File.Create(nazwaPliku))
+            {
+                jsonSerializer.WriteObject(fstream, this);
+            }
+        }
 
+        public static Zespol OdczytajJSON(string nazwaPliku)
+        {
+            try
+            {
+                FileStream fstream = new FileStream(nazwaPliku, FileMode.Open);
+                DataContractJsonSerializer jsonSerializer = new DataContractJsonSerializer(typeof(Zespol));
+                fstream.Position = 0;
+                Zespol z = (Zespol)jsonSerializer.ReadObject(fstream);
+                fstream.Close();
+                return z;
+            }
+            catch (FileNotFoundException)
+            {
+                SystemSounds.Exclamation.Play();
+                Console.WriteLine("Plik o padanej nazwie ({0}) nie istnieje", nazwaPliku);
+            }
+            return null;
+        }
 
     }
 }
