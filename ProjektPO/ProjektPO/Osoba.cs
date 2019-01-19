@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
+/// <summary>  
+///  Ta klasa zawiera dane osoby, która może być albo pracownikiem albo klientem. 
+/// </summary> 
+
     [Serializable]
     public enum Plcie
     {
@@ -22,6 +26,7 @@ namespace Projekt
 
         public string Imie { get => imie; set => imie = value; }
         public string Nazwisko { get => nazwisko; set => nazwisko = value; }
+
         public string Pesel
         {
             get

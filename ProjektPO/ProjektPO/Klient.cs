@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
+/// <summary>  
+///  Ta klasa zawiera podstawowe informacje o kliencie. 
+/// </summary> 
+
     [Serializable]
     class Klient : Osoba, ICloneable, IComparable<Klient>
     {

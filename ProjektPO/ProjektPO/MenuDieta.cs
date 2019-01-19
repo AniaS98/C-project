@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Projekt
 {
+/// <summary>  
+///  Ta klasa zawiera szczegółowe informacje na temat diety, przypisanej jej cenie i alergenach. 
+/// </summary> 
     class MenuDieta : Dieta, ICloneable
     {
         List<Dieta> menu;
@@ -15,7 +18,7 @@ namespace Projekt
             Menu = new List<Dieta>();
 
             /// <summary>
-            /// Przypisanie cen poszczególnym alergentom
+            /// Przypisanie cen poszczególnym alergentom.
             /// </summary>
             SAlergen S0 = new SAlergen(ERodzajAlergenu.brak, 0);
             SAlergen S1 = new SAlergen(ERodzajAlergenu.gluten, 4.0);
@@ -113,7 +116,7 @@ namespace Projekt
             alergenyBezglutenowa.Add(S14);
 
              /// <summary>
-            /// Przypisanie do konkretnej diety ceny za nia oraz odpowiadającej jej liście alergenów
+            /// Przypisanie do konkretnej diety ceny za nia oraz odpowiadającej jej listy alergenów
             /// </summary>
             Dieta podstawowa = new Dieta(ERodzajeDiet.podstawowa, 25.0, alergenyPodstawowa);
             Dieta wegetariańska = new Dieta(ERodzajeDiet.wegetariańska, 32.50, alergenyWegetarianska);
