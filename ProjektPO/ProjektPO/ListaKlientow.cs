@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
+/// <summary>  
+///  Ta klasa zawiera listę klientów. 
+/// </summary> 
+
     [Serializable]
     class ListaKlientow : ICloneable, IComparable<ListaKlientow>
     {
@@ -31,12 +35,18 @@ namespace Projekt
             this.klienci = klienci;
         }
 
-        public void DodajPracownika(Klient k)
+/// <summary>  
+///  Ta funkcja pozwala na dodanie klienta do listy klientów.
+/// </summary> 
+        public void DodajKlienta(Klient k)
         {
             LiczbaKlientow++;
             klienci.Add(k);
         }
 
+/// <summary>  
+///  Ta funkcja pozwala na usunięcie klienta z listy klientów. 
+/// </summary> 
         public void UsunKlienta(string imie, string nazwisko)
         {
             foreach (Klient i in klienci)

@@ -7,6 +7,10 @@ using System.Xml.Serialization;
 
 namespace Projekt
 {
+/// <summary>  
+///  Ta klasa zawiera podstawowe informacje o pracowniku 
+/// </summary> 
+
     [Serializable]
     [XmlRoot("Pracownik")]
     public class Pracownik : Osoba

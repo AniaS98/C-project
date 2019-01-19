@@ -4,6 +4,10 @@ using System.Text;
 
 namespace Projekt
 {
+/// <summary>  
+///  Ta klasa zawiera podstawowe informacje o zamówieniu. 
+/// </summary> 
+
     [Serializable]
     class Zamowienie : ICloneable, IComparable<Zamowienie>
     {

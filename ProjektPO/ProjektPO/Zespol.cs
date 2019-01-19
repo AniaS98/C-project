@@ -7,12 +7,18 @@ using System.Xml.Serialization;
 
 namespace Projekt
 {
+/// <summary>  
+///  Ta klasa zawiera podstawowe informacje o zespole pracowników. 
+/// </summary>  
+
+
+
     [Serializable]
     [XmlRoot("Zespol")]
     public class Zespol
     {
         public int liczbaPracownikow;
-        public string nazwa; //Chyba nie musi być nazwy
+        public string nazwa; 
         public List<Pracownik> pracownicy;
         public List<int> indeksyDaty;
         public List<int> indeksy;
@@ -50,6 +56,9 @@ namespace Projekt
             return s;
         }
 
+/// <summary>  
+///  Funkcja pozwalająca usunąć pracownika z listy pracowników zespołu
+/// </summary>  
         public void UsunPracownika(string imie, string nazwisko)
         {
             foreach (Pracownik i in pracownicy)
@@ -62,14 +71,18 @@ namespace Projekt
                 }
             }
         }
-
-        public void DodajDoTerminarza(int n, int a, string z) //Wyszukuje miejsce w terminarzu i wpisuje w wolne miejsce zamówienie //nie Zamowienie tylko jego numer
+ 
+/// <summary>  
+/// Funkcja wyszukująca miejsce w terminarzu i wpisująca w wolne miejsce numer zamówienie 
+/// </summary>  
+        public void DodajDoTerminarza(int n, int a, string z) 
         {
-            Pracownicy[a].Terminarz[n].Add(z); //Nie pamiętam czy to wszystko, bo jeżeli tak, to to nie musi byc funkcja
-
+            Pracownicy[a].Terminarz[n].Add(z); 
         }
 
-
+/// <summary>  
+/// Ta funkcja rezerwuje datę zamówienia, w przypadku braku miejsca w terminarzu zwrócić false
+/// </summary>  
         public void ZlozenieZamowienia(DateTime dataPoczatkowa, DateTime dataKoncowa, string z)
         {
             bool spr1 = true;
@@ -84,7 +97,7 @@ namespace Projekt
                         indeksyDaty.Add(n);
                         indeksy.Add(i);
                         spr = true;
-                    }//???
+                    }
                 }
                 if (spr == false)
                 {
