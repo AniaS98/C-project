@@ -20,16 +20,14 @@ namespace gui
     /// </summary>
     partial class WindowListaPracownikow : Window
     {
-        public Zespol zespol = new Zespol();
+        public Zespol zespol= new Zespol();
         public ObservableCollection <Pracownik> lista;
         
-        WindowListaPracownikow()
+        public WindowListaPracownikow()
         {
-            //InitializeComponent();
-            //lista = new ObservableCollection<Zespol>();
-            //dieta = (Dieta)Dieta.OdczytajXML("dieta2.xml"); //tu właściwa ścieżka!
-           
-       
+            InitializeComponent();
+            lista = new ObservableCollection<Pracownik>();
+            listbox_zespol.ItemsSource = lista;
         }
 
        public  void Dodaj(object sender, RoutedEventArgs e)

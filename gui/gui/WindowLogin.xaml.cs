@@ -20,6 +20,10 @@ namespace gui
     /// </summary>
     public partial class WindowLogin : Window
     {
+        public string login="admin";
+        public string haslo="admin";
+
+
         public WindowLogin()
         {
             InitializeComponent();
@@ -27,9 +31,16 @@ namespace gui
 
         public  void Zaloguj(object sender, RoutedEventArgs e)
         {
-            this.Close();
-            //WindowListaPracownikow okno = new WindowListaPracownikow();
-           // okno.ShowDialog();
+            if((login==textbox_login.Text) )
+            {
+                if (haslo==passwordbox_haslo.Password)
+                {
+                    this.Close();
+                    WindowListaPracownikow okno = new WindowListaPracownikow();
+                    okno.ShowDialog();
+                }
+            }
+            //else
         }
 
         private void Powrot(object sender, RoutedEventArgs e)

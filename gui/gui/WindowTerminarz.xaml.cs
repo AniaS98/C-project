@@ -19,9 +19,13 @@ namespace gui
     /// </summary>
     public partial class WindowTerminarz : Window
     {
+      
+
         public WindowTerminarz()
         {
             InitializeComponent();
+            //lista = new ObservableCollection<>();
+            //listbox_terminarz.ItemsSource = lista;
         }
 
         private void Powrot(object sender, RoutedEventArgs e)
