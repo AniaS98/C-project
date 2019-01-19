@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Projekt
 {
-    class Zamowienie
+    [Serializable]
+    class Zamowienie : ICloneable, IComparable<Zamowienie>
     {
         string numerZamowienia;
         DateTime dataRozpoczeciaZamowienia;
@@ -47,8 +48,9 @@ namespace Projekt
             this.menuWybor = menuWybor;
         }
 
-
-        //wyświetla listę diet możliwych do wyboru i pozwala na wybranie jednej
+        /// <summary>
+        /// Funkcja wyświetlająca listę diet możliwych do wyboru i pozwalająca na wybranie jednej z nich
+        /// </summary>
         public void WybierzDiete()
         {
             int n, pozycja = 0;
@@ -60,7 +62,7 @@ namespace Projekt
             }
 
             Console.WriteLine("Wybierz numer diety: ");
-            if (Int32.TryParse(Console.ReadLine(), out n)) ;
+            if (Int32.TryParse(Console.ReadLine(), out n)) 
             {
                 if (n > 0 && n < pozycja)
                     WybranaDieta = MenuWybor.Menu[n - 1];
@@ -72,8 +74,9 @@ namespace Projekt
             }
         }
 
-
-        //wyświetla listę alergenów dla wybranej wcześniej diety i pozwala na wybranie kilku alergenów lub braku(co oznacza, że nie wybierasz żadnego)
+        /// <summary>
+        /// Funkcja wyświetlająca listę alergenów dla wybranej wcześniej diety i pozwalająca na wybranie kilku alergenów lub braku(co oznacza, że nie wybierasz żadnego)
+        /// </summary>
         public void WybierzAlergent()
         {
             int pozycja = 0, n;
@@ -88,7 +91,7 @@ namespace Projekt
 
             do
             {
-                if (Int32.TryParse(Console.ReadLine(), out n)) ;
+                if (Int32.TryParse(Console.ReadLine(), out n)) 
                 {
                     if (n > 0 && n < pozycja)
                         WybranaDieta.Alergeny[n - 1].Wybrane = true;
@@ -101,9 +104,11 @@ namespace Projekt
             } while (n != 0);
         }
 
-
-        //oblicza cenę końcową zamówienia = cena wybranej diety + ceny wybranych alergenów
+        /// <summary>
+        ///Funkcja obliczająca cenę końcową zamówienia = cena wybranej diety + ceny wybranych alergenów
+        /// </summary>
         public double CenaKoncowa()
+       
         {
             double cenaKoncowa;
             cenaKoncowa = WybranaDieta.Cena;
@@ -117,6 +122,16 @@ namespace Projekt
             }
             Console.WriteLine(cenaKoncowa);
             return cenaKoncowa;
+        }
+
+        public object Clone()
+        {
+            return new Zamowienie(dataRozpoczeciaZamowienia, dataKoncaZamowienia, (Adres)Adres.Clone(), wybranaDieta.Clone1(), (MenuDieta)menuWybor.Clone());
+        }
+
+        public int CompareTo(Zamowienie z)
+        {
+            return numerZamowienia.CompareTo(z.numerZamowienia);
         }
 
     }

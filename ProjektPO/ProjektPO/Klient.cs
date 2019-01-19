@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Projekt
 {
     [Serializable]
-    class Klient : Osoba
+    class Klient : Osoba, ICloneable, IComparable<Klient>
     {
         List<Zamowienie> listaZamowien;
 
@@ -20,7 +20,7 @@ namespace Projekt
 
         public Klient(string imie, string nazwisko, string pesel, Plcie plec) : base(imie, nazwisko, pesel, plec)
         {
-
+            listaZamowien = new List<Zamowienie>();
         }
 
         public void DodajZamowienie(Zamowienie z)
@@ -38,5 +38,32 @@ namespace Projekt
             }
         }
         */
+
+        public object Clone()
+        {
+            Klient kopia = new Klient(Imie, Nazwisko, Pesel, Plec);
+
+            foreach (Zamowienie z in listaZamowien)
+            {
+                kopia.listaZamowien.Add(z);
+            }
+
+            return kopia;
+        }
+
+        public int CompareTo(Klient k)
+        {
+            if (k == null) return 1;
+
+            if (Nazwisko == k.Nazwisko)
+            {
+                if (Imie == k.Imie)
+                {
+                    return Pesel.CompareTo(k.Pesel);
+                }
+                return Imie.CompareTo(k.Imie);
+            }
+            return Nazwisko.CompareTo(k.Nazwisko);
+        }
     }
 }

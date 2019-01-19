@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projekt
 {
-    class MenuDieta : Dieta
+    class MenuDieta : Dieta, ICloneable
     {
         List<Dieta> menu;
 
@@ -14,6 +14,9 @@ namespace Projekt
         {
             Menu = new List<Dieta>();
 
+            /// <summary>
+            /// Przypisanie cen poszczególnym alergentom
+            /// </summary>
             SAlergen S0 = new SAlergen(ERodzajAlergenu.brak, 0);
             SAlergen S1 = new SAlergen(ERodzajAlergenu.gluten, 4.0);
             SAlergen S2 = new SAlergen(ERodzajAlergenu.mleko, 3.5);
@@ -28,6 +31,10 @@ namespace Projekt
             SAlergen S13 = new SAlergen(ERodzajAlergenu.seler, 2.0);
             SAlergen S14 = new SAlergen(ERodzajAlergenu.mięczaki, 3.0);
 
+
+            /// <summary>
+            /// Lista alergenów do diety Podstawowej
+            /// </summary>
             List<SAlergen> alergenyPodstawowa = new List<SAlergen>();
             alergenyPodstawowa.Add(S0);
             alergenyPodstawowa.Add(S1);
@@ -43,6 +50,9 @@ namespace Projekt
             alergenyPodstawowa.Add(S13);
             alergenyPodstawowa.Add(S14);
 
+            /// <summary>
+            /// Lista alergenów do diety Wegetariańskiej
+            /// </summary>
             List<SAlergen> alergenyWegetarianska = new List<SAlergen>();
             alergenyWegetarianska.Add(S0);
             alergenyWegetarianska.Add(S1);
@@ -55,6 +65,9 @@ namespace Projekt
             alergenyWegetarianska.Add(S12);
             alergenyWegetarianska.Add(S13);
 
+             /// <summary>
+            /// Lista alergenów do diety Wegańskiej
+            /// </summary>
             List<SAlergen> alergenyWeganska = new List<SAlergen>();
             alergenyWeganska.Add(S0);
             alergenyWeganska.Add(S1);
@@ -65,6 +78,9 @@ namespace Projekt
             alergenyWeganska.Add(S12);
             alergenyWeganska.Add(S13);
 
+             /// <summary>
+            /// Lista alergenów do diety Bezlaktozowej
+            /// </summary>
             List<SAlergen> alergenyBezlaktozowa = new List<SAlergen>();
             alergenyBezlaktozowa.Add(S0);
             alergenyBezlaktozowa.Add(S1);
@@ -79,6 +95,9 @@ namespace Projekt
             alergenyBezlaktozowa.Add(S13);
             alergenyBezlaktozowa.Add(S14);
 
+             /// <summary>
+            /// Lista alergenów do diety Bezglutenowej
+            /// </summary>
             List<SAlergen> alergenyBezglutenowa = new List<SAlergen>();
             alergenyBezglutenowa.Add(S0);
             alergenyBezglutenowa.Add(S2);
@@ -93,12 +112,18 @@ namespace Projekt
             alergenyBezglutenowa.Add(S13);
             alergenyBezglutenowa.Add(S14);
 
+             /// <summary>
+            /// Przypisanie do konkretnej diety ceny za nia oraz odpowiadającej jej liście alergenów
+            /// </summary>
             Dieta podstawowa = new Dieta(ERodzajeDiet.podstawowa, 25.0, alergenyPodstawowa);
             Dieta wegetariańska = new Dieta(ERodzajeDiet.wegetariańska, 32.50, alergenyWegetarianska);
             Dieta wegańska = new Dieta(ERodzajeDiet.wegańska, 35.00, alergenyWeganska);
             Dieta bezlaktozowa = new Dieta(ERodzajeDiet.bezlaktozowa, 36.00, alergenyBezlaktozowa);
             Dieta bezglutenowa = new Dieta(ERodzajeDiet.bezglutenowa, 37.50, alergenyBezglutenowa);
 
+            /// <summary>
+            /// Dodanie do menu poszczególnych diet
+            /// </summary>
             Menu.Add(podstawowa);
             Menu.Add(wegetariańska);
             Menu.Add(wegańska);
@@ -106,6 +131,18 @@ namespace Projekt
             Menu.Add(bezglutenowa);
         }
 
+        public object Clone()
+        {
+            MenuDieta kopia = new MenuDieta();
+            kopia.menu = new List<Dieta>();
+
+            foreach (Dieta d in menu)
+            {
+                kopia.menu.Add(d.Clone1());
+            }
+
+            return kopia;
+        }
 
     }
 }

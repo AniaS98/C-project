@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    class ListaKlientow
+    [Serializable]
+    class ListaKlientow : ICloneable, IComparable<ListaKlientow>
     {
         int LiczbaKlientow;
         string nazwa;
@@ -25,7 +26,9 @@ namespace Projekt
 
         public ListaKlientow(string nazwa, List<Klient> klienci, int LiczbaKlientow)
         {
-            
+            this.nazwa = nazwa;
+            this.LiczbaKlientow = LiczbaKlientow;
+            this.klienci = klienci;
         }
 
         public void DodajPracownika(Klient k)
@@ -45,6 +48,29 @@ namespace Projekt
                     return;
                 }
             }
+        }
+
+        public object Clone()
+        {
+            ListaKlientow kopia = new ListaKlientow(nazwa, new List<Klient>(), LiczbaKlientow);
+
+            foreach (Klient k in klienci)
+            {
+                kopia.klienci.Add(k);
+            }
+
+            return kopia;
+        }
+
+        public int CompareTo(ListaKlientow k)
+        {
+            if (k == null) return 1;
+
+            if (LiczbaKlientow1 == k.LiczbaKlientow1)
+            {
+                return LiczbaKlientow1.CompareTo(k.LiczbaKlientow1);
+            }
+            return nazwa.CompareTo(k.nazwa);
         }
 
     }

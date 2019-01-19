@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Xml.Serialization;
 
 namespace Projekt
 {
     [Serializable]
-    class Pracownik : Osoba
+    [XmlRoot("Pracownik")]
+    public class Pracownik : Osoba
     {
-        private List<string>[] terminarz = new List<string>[366];
+        public List<string>[] terminarz = new List<string>[366];
         public DateTime[] kalendarz = new DateTime[366]; //Tu ni dałam getów setów, ale jak nie działą to dodajcie :)
 
         public List<string>[] Terminarz { get => terminarz; set => terminarz = value; }
@@ -25,7 +26,7 @@ namespace Projekt
             }
         }
 
-        public Pracownik(string imie, string nazwisko, string pesel, Plcie plec, List<string>[] terminarz) : base(imie, nazwisko, pesel, plec)
+        Pracownik(string imie, string nazwisko, string pesel, Plcie plec, List<string>[] terminarz) : base(imie, nazwisko, pesel, plec)
         {
             this.terminarz = terminarz;
 

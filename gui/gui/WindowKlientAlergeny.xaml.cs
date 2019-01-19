@@ -13,22 +13,33 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Projekt;
 
+
 namespace gui
 {
     /// <summary>
     /// Logika interakcji dla klasy WindowKlientAlergeny.xaml
     /// </summary>
-    public partial class WindowKlientAlergeny : Window
+    partial class WindowKlientAlergeny : Window
     {
-        Dieta dieta = new Dieta();
+        Projekt.Dieta dieta = new Projekt.Dieta();
         ObservableCollection<SAlergen> lista;
 
         public WindowKlientAlergeny()
         {
             InitializeComponent();
             lista = new ObservableCollection<SAlergen>();
-            dieta = (Dieta)Dieta.OdczytajXML("dieta2.xml"); //tu właściwa ścieżka!
-            lista = new ObservableCollection<SAlergen>(dieta.ERodzajAlergenu);
+            //dieta = (Dieta)Dieta.OdczytajXML("dieta2.xml"); //tu właściwa ścieżka!
+            //lista = new ObservableCollection<SAlergen>(dieta.ERodzajAlergenu);
+
+        }
+
+        private void Button_Wstecz(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Dalej(object sender, RoutedEventArgs e)
+        {
 
         }
     }

@@ -10,6 +10,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Projekt;
+
 
 namespace gui
 {
@@ -23,11 +25,11 @@ namespace gui
             InitializeComponent();
         }
 
-        private void Zaloguj(object sender, RoutedEventArgs e)
+        public  void Zaloguj(object sender, RoutedEventArgs e)
         {
             this.Close();
-            WindowListaPracownikow okno = new WindowListaPracownikow();
-            okno.ShowDialog();
+            //WindowListaPracownikow okno = new WindowListaPracownikow();
+           // okno.ShowDialog();
         }
 
         private void Powrot(object sender, RoutedEventArgs e)
