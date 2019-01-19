@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="WindowBlad.xaml.cs">
+      <DependentUpon>WindowBlad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowDodajPracownika.xaml.cs">
+      <DependentUpon>WindowDodajPracownika.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowKlient.xaml.cs">
       <DependentUpon>WindowKlient.xaml</DependentUpon>
     </Compile>
@@ -94,6 +100,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WindowBlad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowDodajPracownika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowKlient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

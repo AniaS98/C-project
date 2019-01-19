@@ -36,7 +36,8 @@ namespace Projekt
 
         }
 
-
-
+        public Pracownik()
+        {
+        }
     }
 }

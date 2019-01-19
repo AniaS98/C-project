@@ -32,11 +32,11 @@ namespace gui
 
        public  void Dodaj(object sender, RoutedEventArgs e)
         {
-            //Pracownik p = new Pracownik();
-            //OsobaWindow okno = new OsobaWindow(cz);
-           // okno.ShowDialog();
-            //zespol.DodajPracownika(p);
-            //lista.Add(p); 
+            Pracownik p = new Pracownik();
+            WindowDodajPracownika okno = new WindowDodajPracownika(p);
+            okno.ShowDialog();
+            zespol.DodajPracownika(p);
+            lista.Add(p);
         }
 
         public void Dalej(object sender, RoutedEventArgs e)

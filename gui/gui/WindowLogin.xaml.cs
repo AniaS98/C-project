@@ -31,16 +31,21 @@ namespace gui
 
         public  void Zaloguj(object sender, RoutedEventArgs e)
         {
-            if((login==textbox_login.Text) )
+            if ((login == textbox_login.Text))
             {
-                if (haslo==passwordbox_haslo.Password)
+                if (haslo == passwordbox_haslo.Password)
                 {
                     this.Close();
                     WindowListaPracownikow okno = new WindowListaPracownikow();
                     okno.ShowDialog();
                 }
             }
-            //else
+            else
+            {
+                this.Close();
+                WindowBlad okno = new WindowBlad();
+                okno.ShowDialog();
+            }
         }
 
         private void Powrot(object sender, RoutedEventArgs e)
