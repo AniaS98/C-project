@@ -23,7 +23,32 @@ namespace Projekt
                     }
                 case '1':
                     {
-                        
+                        string imie;
+                        string nazwisko;
+                        string pesel;
+                        Console.WriteLine("Podaj imie: \n");
+                        imie = Console.ReadLine();
+                        Console.WriteLine("Nazwisko: \n");
+                        nazwisko = Console.ReadLine();
+                        Console.WriteLine("PESEL: \n");
+                        pesel = Console.ReadLine();
+                        int plec;
+                        Console.WriteLine("Wybierz Plec - 1-kobieta, 2-mężczyzna \n");\
+                        plec = Console.Read();
+                        switch(plec)
+                        {
+                            case '1':
+                                {
+                                    Console.WriteLine("kobieta");
+                                    break;
+                                }
+                            case '2':
+                                {
+                                    Console.WriteLine("mężczyzna");
+                                    break;
+                                }
+                        }
+
                         break;
                     }
                 case '2':
@@ -37,6 +62,7 @@ namespace Projekt
                         while(haslo!="admin"&& login!="admin")
                         {
                             Console.WriteLine("Zły login lub hasło!");
+                            break;
                         }
 
                         Console.WriteLine("!!!");
