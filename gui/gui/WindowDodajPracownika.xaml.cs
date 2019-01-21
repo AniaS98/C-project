@@ -34,7 +34,7 @@ namespace gui
         public WindowDodajPracownika(Osoba osoba) : this()
         {
             this.osoba = osoba;
-            if (osoba.Pesel != "00000000000")
+            if (osoba.Pesel == "00000000000")
             {
                 textbox_pesel.Text = osoba.Pesel;
                 textbox_imie.Text = osoba.Imie;
