@@ -7,29 +7,33 @@
         mc:Ignorable="d"
         Title=" " Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="691*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFE9FF60" Offset="0"/>
                 <GradientStop Color="#FFB3F96D" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="Podsumowanie zamówienia:" HorizontalAlignment="Left" Height="34" Margin="174,31,0,0" VerticalAlignment="Top" Width="408"  FontFamily="Global User Interface" FontSize="20"/>
-        <Label Content="Imię:" HorizontalAlignment="Left" Height="32" Margin="35,108,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14"/>
-        <Label Content="Nazwisko:" HorizontalAlignment="Left" Height="32" Margin="35,160,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface"  FontSize="14"/>
-        <Label Content="Adres:" HorizontalAlignment="Left" Height="32" Margin="35,208,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14"/>
-        <Label Content="Liczba dni:" HorizontalAlignment="Left" Height="32" Margin="388,108,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14"/>
-        <Label Content="Dieta:" HorizontalAlignment="Left" Height="32" Margin="388,160,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14"/>
-        <Label Content="Alergeny:" HorizontalAlignment="Left" Height="32" Margin="388,208,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14"/>
-        <Button Content="Wstecz" HorizontalAlignment="Left" Height="39" Margin="60,326,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Wstecz"/>
-        <Button Content="Potwierdzam dane" HorizontalAlignment="Left" Height="39" Margin="438,326,0,0" VerticalAlignment="Top" Width="251" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Dalej"/>
-        <TextBlock Name="Imie" HorizontalAlignment="Left" Height="34" Margin="160,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" />
-        <TextBlock Name="Nazwisko" HorizontalAlignment="Left" Height="34" Margin="160,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
-        <TextBlock Name="Adres" HorizontalAlignment="Left" Height="34" Margin="115,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195"/>
-        <TextBlock Name="LiczbaDni" HorizontalAlignment="Left" Height="32" Margin="515,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
-        <TextBlock Name="Dieta" HorizontalAlignment="Left" Height="32" Margin="515,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
-        <TextBlock Name="Alergeny" HorizontalAlignment="Left" Height="33" Margin="518,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171"/>
-        <Label Content="Cena:" HorizontalAlignment="Left" Height="32" Margin="388,259,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14" FontWeight="Bold"/>
-        <TextBlock Name="Cena" HorizontalAlignment="Left" Height="32" Margin="504,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+        <Label Content="Podsumowanie zamówienia:" HorizontalAlignment="Left" Height="34" Margin="72.681,31,0,0" VerticalAlignment="Top" Width="408"  FontFamily="Global User Interface" FontSize="20" Grid.Column="1"/>
+        <Label Content="Imię:" HorizontalAlignment="Left" Height="32" Margin="35,108,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label Content="Nazwisko:" HorizontalAlignment="Left" Height="32" Margin="35,160,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface"  FontSize="14" Grid.ColumnSpan="2"/>
+        <Label Content="Adres:" HorizontalAlignment="Left" Height="32" Margin="35,208,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label Content="Liczba dni:" HorizontalAlignment="Left" Height="32" Margin="286.681,108,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14" Grid.Column="1"/>
+        <Label Content="Dieta:" HorizontalAlignment="Left" Height="32" Margin="286.681,160,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14" Grid.Column="1"/>
+        <Label Content="Alergeny:" HorizontalAlignment="Left" Height="32" Margin="286.681,208,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14" Grid.Column="1"/>
+        <Button Content="Wstecz" HorizontalAlignment="Left" Height="39" Margin="60,326,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Wstecz" Grid.ColumnSpan="2"/>
+        <Button Content="Potwierdzam dane" HorizontalAlignment="Left" Height="39" Margin="336.681,326,0,0" VerticalAlignment="Top" Width="251" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Dalej" Grid.Column="1"/>
+        <TextBlock Name="Imie" HorizontalAlignment="Left" Height="34" Margin="58.681,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Grid.Column="1" />
+        <TextBlock Name="Nazwisko" HorizontalAlignment="Left" Height="34" Margin="58.681,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
+        <TextBlock Name="Adres" HorizontalAlignment="Left" Height="34" Margin="13.681,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Grid.Column="1"/>
+        <TextBlock Name="LiczbaDni" HorizontalAlignment="Left" Height="32" Margin="413.681,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Grid.Column="1"/>
+        <TextBlock Name="Dieta" HorizontalAlignment="Left" Height="32" Margin="413.681,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Grid.Column="1"/>
+        <TextBlock Name="Alergeny" HorizontalAlignment="Left" Height="33" Margin="416.681,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Grid.Column="1"/>
+        <Label Content="Cena:" HorizontalAlignment="Left" Height="32" Margin="286.681,259,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+        <TextBlock Name="Cena" HorizontalAlignment="Left" Height="32" Margin="402.681,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Grid.Column="1"/>
 
 
     </Grid>
