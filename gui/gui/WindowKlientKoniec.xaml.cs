@@ -19,9 +19,15 @@ namespace gui
     /// </summary>
     public partial class WindowKlientKoniec : Window
     {
-        public WindowKlientKoniec()
+        public WindowKlientKoniec(string nrZamowienia)
         {
             InitializeComponent();
+            NrZamowienia.Text = nrZamowienia;
+        }
+
+        private void Button_Potwierdz(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

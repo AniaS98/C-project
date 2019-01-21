@@ -11,23 +11,24 @@ namespace Projekt
 /// </summary> 
 
     [Serializable]
-    class Klient : Osoba, ICloneable, IComparable<Klient>
+    public class Klient : Osoba, ICloneable, IComparable<Klient>
     {
         List<Zamowienie> listaZamowien;
 
-        public List<Zamowienie> ListaZamowien { get => listaZamowien; set => listaZamowien = value; }
+        List<Zamowienie> ListaZamowien { get => listaZamowien; set => listaZamowien = value; }
 
         public Klient()
         {
             listaZamowien = new List<Zamowienie>(); //?
         }
-
-        public Klient(string imie, string nazwisko, string pesel, Plcie plec) : base(imie, nazwisko, pesel, plec)
+       
+        public Klient(string imie, string nazwisko, string pesel, Plcie plec) 
+            : base(imie, nazwisko, pesel, plec)
         {
             listaZamowien = new List<Zamowienie>();
         }
 
-        public void DodajZamowienie(Zamowienie z)
+        void DodajZamowienie(Zamowienie z)
         {
             listaZamowien.Add(z);
         }

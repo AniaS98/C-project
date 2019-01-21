@@ -21,28 +21,45 @@ namespace gui
     /// </summary>
     partial class WindowKlientAlergeny : Window
     {
-        Projekt.Dieta dieta = new Projekt.Dieta();
-        ObservableCollection<SAlergen> lista;
+        Dieta dieta;
+        Zamowienie zamowienie;
 
-        public WindowKlientAlergeny()
+        public WindowKlientAlergeny(Zamowienie zamowienie)
         {
             InitializeComponent();
-            lista = new ObservableCollection<SAlergen>();
-
+            this.zamowienie = zamowienie;
+            dieta = zamowienie.WybranaDieta;
         }
 
         private void Button_Wstecz(object sender, RoutedEventArgs e)
         {
             this.Close();
-            WindowKlientZamowienie okno = new WindowKlientZamowienie();
+            WindowKlientZamowienie okno = new WindowKlientZamowienie(zamowienie);
             okno.ShowDialog();
         }
 
         private void Button_Dalej(object sender, RoutedEventArgs e)
         {
             this.Close();
-            WindowSzczegolyZamowienia okno = new WindowSzczegolyZamowienia();
+            WindowSzczegolyZamowienia okno = new WindowSzczegolyZamowienia(zamowienie);
             okno.ShowDialog();
+        }
+
+        private void RadioButton_Brak(object sender, RoutedEventArgs e)
+        {
+            dieta.Alergeny.Clear();
+        }
+
+        private void CheckButton_Alergen(object sender, RoutedEventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            string nazwa = checkBox.Content.ToString().ToLower();
+            SAlergen sa = MenuDieta.ListaWszystkichAlergenów.Where(a => a.Nazwa.ToString() == nazwa).First();
+            if (checkBox.IsEnabled)
+                if(!zamowienie.WybranaDieta.Alergeny.Contains(sa))
+                    zamowienie.WybranaDieta.Alergeny.Add(sa);
+            else
+                zamowienie.WybranaDieta.Alergeny.Remove(sa);
         }
     }
 }

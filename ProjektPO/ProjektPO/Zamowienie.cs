@@ -9,21 +9,24 @@ namespace Projekt
 /// </summary> 
 
     [Serializable]
-    class Zamowienie : ICloneable, IComparable<Zamowienie>
+    public class Zamowienie : ICloneable, IComparable<Zamowienie>
     {
         string numerZamowienia;
         DateTime dataRozpoczeciaZamowienia;
         DateTime dataKoncaZamowienia;
         static int liczbaZamowien;
         Adres adres;
+        Osoba osoba;
         Dieta wybranaDieta;
         MenuDieta menuWybor;
 
 
         public DateTime DataRozpoczeciaZamowienia { get => dataRozpoczeciaZamowienia; set => dataRozpoczeciaZamowienia = value; }
         public DateTime DataKoncaZamowienia { get => dataKoncaZamowienia; set => dataKoncaZamowienia = value; }
-        internal Adres Adres { get => adres; set => adres = value; }
+        public Adres Adres { get => adres; set => adres = value; }
         public Dieta WybranaDieta { get => wybranaDieta; set => wybranaDieta = value; }
+        public string NumerZamowienia { get => numerZamowienia; private set => numerZamowienia = value; }
+        public Osoba Osoba { get => osoba; set => osoba = value; }
         internal MenuDieta MenuWybor { get => menuWybor; set => menuWybor = value; }
 
         static Zamowienie()
@@ -36,7 +39,7 @@ namespace Projekt
             dataRozpoczeciaZamowienia = DateTime.Now;
             dataKoncaZamowienia = DateTime.Now;
             liczbaZamowien++;
-            numerZamowienia = liczbaZamowien + "/" + dataRozpoczeciaZamowienia.Year;
+            NumerZamowienia = liczbaZamowien + "/" + dataRozpoczeciaZamowienia.Year;
             wybranaDieta = new Dieta();
             menuWybor = new MenuDieta();
         }
@@ -44,7 +47,7 @@ namespace Projekt
         public Zamowienie(DateTime dataRozpoczeciaZamowienia, DateTime dataKoncaZamowienia, Adres adres, Dieta wybranaDieta, MenuDieta menuWybor)
         {
             liczbaZamowien++;
-            numerZamowienia = liczbaZamowien + "/" + dataRozpoczeciaZamowienia.Year;
+            NumerZamowienia = liczbaZamowien + "/" + dataRozpoczeciaZamowienia.Year;
             this.dataRozpoczeciaZamowienia = dataRozpoczeciaZamowienia;
             this.dataKoncaZamowienia = dataKoncaZamowienia;
             this.adres = adres;

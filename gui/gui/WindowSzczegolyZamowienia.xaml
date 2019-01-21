@@ -15,20 +15,20 @@
         </Grid.Background>
         <Button Content="Wstecz" HorizontalAlignment="Left" Height="39" Margin="65,350,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Wstecz"/>
         <Button Content="Dalej" HorizontalAlignment="Left" Height="39" Margin="490,350,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Dalej"/>
-        <Label Content="Data rozpoczęcia" HorizontalAlignment="Left" Height="34" Margin="367,138,0,0" VerticalAlignment="Top" Width="117" FontFamily="Global User Interface" FontSize="14"/>
-        <Label Content="Data zakończenia" HorizontalAlignment="Left" Height="32" Margin="367,85,0,0" VerticalAlignment="Top" Width="117" FontFamily="Global User Interface" FontSize="14"/>
+        <Label Content="Data rozpoczęcia" HorizontalAlignment="Left" Height="34" Margin="381,84,0,0" VerticalAlignment="Top" Width="117" FontFamily="Global User Interface" FontSize="14"/>
+        <Label Content="Data zakończenia" HorizontalAlignment="Left" Height="32" Margin="381,141,0,0" VerticalAlignment="Top" Width="117" FontFamily="Global User Interface" FontSize="14"/>
         <Label Content="Adres:" HorizontalAlignment="Left" Height="32" Margin="19,53,0,0" VerticalAlignment="Top" Width="100" FontSize="18" FontFamily="Global User Interface" FontWeight="Bold"/>
-        <DatePicker HorizontalAlignment="Left" Height="32" Margin="531,86,0,0" VerticalAlignment="Top" Width="168"/>
-        <DatePicker HorizontalAlignment="Left" Height="34" Margin="531,139,0,0" VerticalAlignment="Top" Width="168"/>
+        <DatePicker Name="DataZakonczenia" HorizontalAlignment="Left" Height="32" Margin="531,142,0,0" VerticalAlignment="Top" Width="168"/>
+        <DatePicker Name="DataRozpoczecia" HorizontalAlignment="Left" Height="34" Margin="531,83,0,0" VerticalAlignment="Top" Width="168"/>
         <Label Content="Ulica" HorizontalAlignment="Left" Height="32" Margin="15,100,0,0" VerticalAlignment="Top" Width="119" FontFamily="Global User Interface" FontSize="14"/>
         <Label Content="Numer domu" HorizontalAlignment="Left" Height="32" Margin="15,140,0,0" VerticalAlignment="Top" Width="104" FontFamily="Global User Interface" FontSize="14"/>
         <Label Content="Numer mieszkania" HorizontalAlignment="Left" Height="32" Margin="15,180,0,0" VerticalAlignment="Top" Width="130" FontFamily="Global User Interface" FontSize="14"/>
         <Label Content="Miasto" HorizontalAlignment="Left" Height="32" Margin="15,220,0,0" VerticalAlignment="Top" Width="104" FontFamily="Global User Interface" FontSize="14"/>
         <Label Content="Kod pocztowy" HorizontalAlignment="Left" Height="37" Margin="15,260,0,0" VerticalAlignment="Top" Width="104"  FontFamily="Global User Interface" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="150,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="150,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="150,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="150,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="150,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
+        <TextBox Name="Ulica" HorizontalAlignment="Left" Height="32" Margin="150,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
+        <TextBox Name="NrDomu" HorizontalAlignment="Left" Height="32" Margin="150,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58"/>
+        <TextBox Name="NrMieszkania" HorizontalAlignment="Left" Height="32" Margin="150,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58"/>
+        <TextBox Name="Miasto" HorizontalAlignment="Left" Height="32" Margin="150,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
+        <TextBox Name="KodPocztowy" HorizontalAlignment="Left" Height="32" Margin="150,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
     </Grid>
 </Window>

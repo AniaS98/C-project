@@ -15,7 +15,8 @@
         </Grid.Background>
         <Label Content="Twoje zamówienie zostało przyjętę do realizacji. " HorizontalAlignment="Left" Height="36" Margin="155,123,0,0" VerticalAlignment="Top" Width="557" FontFamily="Global User Interface" FontWeight="Bold" FontSize="20"/>
         <Label Content="Numer zamówienia:" HorizontalAlignment="Left" Height="37" Margin="214,197,0,0" VerticalAlignment="Top" Width="197" FontSize="16" FontFamily="Global User Interface"/>
-        <TextBlock HorizontalAlignment="left" Height="33" Margin="436,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="113" FontFamily="Global User Interface" FontSize="16"/>
+        <TextBlock Name="NrZamowienia" HorizontalAlignment="left" Height="33" Margin="436,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="113" FontFamily="Global User Interface" FontSize="16"/>
+        <Button Content="OK" HorizontalAlignment="Left" Height="39" Margin="438,326,0,0" VerticalAlignment="Top" Width="251" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Potwierdz"/>
 
     </Grid>
 </Window>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projekt
 {
-    class Adres : ICloneable, IComparable<Adres>
+    public class Adres : ICloneable, IComparable<Adres>
     {
         string ulica;
         string numerDomu;
@@ -24,14 +24,6 @@ namespace Projekt
 
             set
             {
-                if (value.Length < 6 && value.Length > 4)
-                {
-                    throw new FormatException("niepoprawny format (brak '-' pomiędzy liczbami)!");
-                }
-                if (value[2] != '-')
-                {
-                    throw new FormatException("niepoprawny format (brak '-' pomiędzy liczbami)!");
-                }
                 kodPocztowy = value;
             }
         }

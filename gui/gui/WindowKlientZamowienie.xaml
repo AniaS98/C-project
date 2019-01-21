@@ -15,11 +15,11 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Label Content="Dieta:" HorizontalAlignment="Left" Margin="61,10,0,0" VerticalAlignment="Top" Height="57" Width="244" FontSize="24" FontFamily="Global User Interface" FontWeight="Bold" FontStyle="Italic"/>
-        <RadioButton Content="Podstawowa" HorizontalAlignment="Left" Height="30" Margin="61,72,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold"/>
-        <RadioButton Content="Wegetariańska" HorizontalAlignment="Left" Height="30" Margin="61,117,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold"/>
-        <RadioButton Content="Wegańska" HorizontalAlignment="Left" Height="30" Margin="61,166,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold"/>
-        <RadioButton Content="Bezlaktozowa" HorizontalAlignment="Left" Height="30" Margin="61,212,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold"/>
-        <RadioButton Content="Bezglutenowa" HorizontalAlignment="Left" Height="30" Margin="61,260,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold"/>
+        <RadioButton Content="Podstawowa" HorizontalAlignment="Left" Height="30" Margin="61,72,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold" Checked="RadioButton_Podstawowa"/>
+        <RadioButton Content="Wegetariańska" HorizontalAlignment="Left" Height="30" Margin="61,117,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold" Checked="RadioButton_Wegetarianska"/>
+        <RadioButton Content="Wegańska" HorizontalAlignment="Left" Height="30" Margin="61,166,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold" Checked="RadioButton_Weganska"/>
+        <RadioButton Content="Bezlaktozowa" HorizontalAlignment="Left" Height="30" Margin="61,212,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold" Checked="RadioButton_Bezlaktozowa"/>
+        <RadioButton Content="Bezglutenowa" HorizontalAlignment="Left" Height="30" Margin="61,260,0,0" VerticalAlignment="Top" Width="210" FontFamily="Global User Interface" FontSize="16" Foreground="#FF053A11" FontWeight="Bold" Checked="RadioButton_Bezglutenowa"/>
         <Button Content="Wstecz" HorizontalAlignment="Left" Height="39" Margin="61,325,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Wstecz"/>
         <Button Content="Dalej" HorizontalAlignment="Left" Height="39" Margin="484,325,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Dalej"/>
     </Grid>

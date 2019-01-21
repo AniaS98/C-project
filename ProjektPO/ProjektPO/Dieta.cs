@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
-        /// <summary>
-        /// komentarz....
-        /// </summary>
+/// <summary>
+/// komentarz....
+/// </summary>
 
 namespace Projekt
 {
@@ -17,7 +18,6 @@ namespace Projekt
         bezglutenowa
     }
     
-
     public enum ERodzajAlergenu
     {
         brak,
@@ -60,9 +60,9 @@ namespace Projekt
         double cena;
         List<SAlergen> alergeny;
 
-        public double Cena { get => cena; set => cena = value; }
+        public double Cena { get => cena + alergeny.Sum(a => a.Cena); set => cena = value; }
         public List<SAlergen> Alergeny { get => alergeny; set => alergeny = value; }
-        internal ERodzajeDiet Typ { get => typ; set => typ = value; }
+        public ERodzajeDiet Typ { get => typ; set => typ = value; }
 
         public Dieta()
         {

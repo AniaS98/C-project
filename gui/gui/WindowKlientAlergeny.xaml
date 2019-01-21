@@ -13,20 +13,20 @@
                 <GradientStop Color="#FFF2F787" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <RadioButton Content="Brak" HorizontalAlignment="Left" Height="16" Margin="65,60,0,0" VerticalAlignment="Top" Width="237"/>
-        <RadioButton Content="Alergeny wykluczone w diecie:" HorizontalAlignment="Left" Height="16" Margin="65,80,0,0" VerticalAlignment="Top" Width="237"/>
-        <CheckBox Content="Gluten" HorizontalAlignment="Left" Height="16" Margin="155,101,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox Content="Mleko" HorizontalAlignment="Left" Height="16" Margin="155,120,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox Content="Jajka" HorizontalAlignment="Left" Height="16" Margin="155,140,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox Content="Ryby" HorizontalAlignment="Left" Height="16" Margin="155,160,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox Content="Skorupiaki" HorizontalAlignment="Left" Height="16" Margin="155,180,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox Content="Orzechy" HorizontalAlignment="Left" Height="16" Margin="155,200,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox Content="Soja" HorizontalAlignment="Left" Height="16" Margin="155,220,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox Content="Sezam" HorizontalAlignment="Left" Height="16" Margin="155,240,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox Content="Gorczyca" HorizontalAlignment="Left" Height="16" Margin="155,260,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox Content="Łubin" HorizontalAlignment="Left" Height="16" Margin="155,280,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox Content="Seler" HorizontalAlignment="Left" Height="16" Margin="155,300,0,0" VerticalAlignment="Top" Width="100"/>
-        <CheckBox Content="Mięczaki" HorizontalAlignment="Left" Height="16" Margin="155,320,0,0" VerticalAlignment="Top" Width="100"/>
+        <RadioButton Content="Brak" HorizontalAlignment="Left" Height="16" Margin="65,60,0,0" VerticalAlignment="Top" Width="237" Checked="RadioButton_Brak"/>
+        <RadioButton Content="Alergeny wykluczone w diecie:" HorizontalAlignment="Left" Height="16" Margin="65,80,0,0" VerticalAlignment="Top" Width="237" />
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Gluten" HorizontalAlignment="Left" Height="16" Margin="155,101,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Mleko" HorizontalAlignment="Left" Height="16" Margin="155,120,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Jajka" HorizontalAlignment="Left" Height="16" Margin="155,140,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Ryby" HorizontalAlignment="Left" Height="16" Margin="155,160,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Skorupiaki" HorizontalAlignment="Left" Height="16" Margin="155,180,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Orzechy" HorizontalAlignment="Left" Height="16" Margin="155,200,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Soja" HorizontalAlignment="Left" Height="16" Margin="155,220,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Sezam" HorizontalAlignment="Left" Height="16" Margin="155,240,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Gorczyca" HorizontalAlignment="Left" Height="16" Margin="155,260,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Łubin" HorizontalAlignment="Left" Height="16" Margin="155,280,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Seler" HorizontalAlignment="Left" Height="16" Margin="155,300,0,0" VerticalAlignment="Top" Width="100"/>
+        <CheckBox Checked="CheckButton_Alergen" Unchecked="CheckButton_Alergen" Content="Mięczaki" HorizontalAlignment="Left" Height="16" Margin="155,320,0,0" VerticalAlignment="Top" Width="100"/>
         <Button Content="Wstecz" HorizontalAlignment="Left" Height="39" Margin="65,350,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Wstecz"/>
         <Button Content="Dalej" HorizontalAlignment="Left" Height="39" Margin="491,350,0,0" VerticalAlignment="Top" Width="250" FontFamily="Global User Interface" FontSize="16" Background="#FFC6DE84" Click="Button_Dalej"/>
         <Label Content="Alergeny" HorizontalAlignment="Left" Height="45" Margin="65,10,0,0" VerticalAlignment="Top" Width="290" FontFamily="Global User Interface" FontSize="24" FontStyle="Italic" FontWeight="Bold"/>

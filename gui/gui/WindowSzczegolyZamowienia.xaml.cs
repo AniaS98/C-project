@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,19 +20,31 @@ namespace gui
     /// </summary>
     public partial class WindowSzczegolyZamowienia : Window
     {
-        public WindowSzczegolyZamowienia()
-        {
+        Zamowienie zamowienie;
+
+        public WindowSzczegolyZamowienia(Zamowienie zamowienie)
+        { 
+            this.zamowienie = zamowienie;
             InitializeComponent();
         }
 
         private void Button_Wstecz(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
+            WindowKlientAlergeny okno = new WindowKlientAlergeny(zamowienie);
+            okno.Show();
         }
 
         private void Button_Dalej(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
+            if(DataRozpoczecia.SelectedDate == null)
+                zamowienie.DataRozpoczeciaZamowienia = (DateTime)DataRozpoczecia.SelectedDate;
+            if (DataZakonczenia.SelectedDate == null)
+                zamowienie.DataKoncaZamowienia= (DateTime)DataZakonczenia.SelectedDate;
+            zamowienie.Adres = new Adres(Ulica.Text, NrDomu.Text, Convert.ToInt32(NrMieszkania.Text), KodPocztowy.Text, Miasto.Text);
+            WindowPodsumowanieZamowienia okno = new WindowPodsumowanieZamowienia(zamowienie);
+            okno.ShowDialog();
         }
     }
 }
