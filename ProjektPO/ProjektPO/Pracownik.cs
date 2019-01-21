@@ -30,14 +30,16 @@ namespace Projekt
             }
         }
 
+        public Pracownik(string imie, string nazwisko, string pesel, Plcie plec) : base(imie, nazwisko, pesel, plec)
+        {
+        }
+
         Pracownik(string imie, string nazwisko, string pesel, Plcie plec, List<string>[] terminarz) : base(imie, nazwisko, pesel, plec)
         {
             this.terminarz = terminarz;
 
         }
 
-        public Pracownik()
-        {
-        }
+        
     }
 }
