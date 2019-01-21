@@ -26,14 +26,14 @@ namespace Projekt
                         string imie;
                         string nazwisko;
                         string pesel;
-                        Console.WriteLine("Podaj imie: \n");
+                        Console.WriteLine("Podaj imie: ");
                         imie = Console.ReadLine();
-                        Console.WriteLine("Nazwisko: \n");
+                        Console.WriteLine("Nazwisko: ");
                         nazwisko = Console.ReadLine();
-                        Console.WriteLine("PESEL: \n");
+                        Console.WriteLine("PESEL: ");
                         pesel = Console.ReadLine();
                         int plec;
-                        Console.WriteLine("Wybierz Plec - 1-kobieta, 2-mężczyzna \n");\
+                        Console.WriteLine("Wybierz Plec - 1-kobieta, 2-mężczyzna ");
                         plec = Console.Read();
                         switch (plec)
                         {
@@ -55,7 +55,7 @@ namespace Projekt
                     {
                         string login;
                         string haslo;
-                        Console.WriteLine("Login:");
+                        Console.WriteLine("Login: ");
                         login = Console.ReadLine();
                         Console.WriteLine("Hasło: ");
                         haslo = Console.ReadLine();
