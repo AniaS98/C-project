@@ -47,9 +47,11 @@ namespace gui
 
         public void Lista(object sender, SelectionChangedEventArgs e)
         {
+            listbox_zespol.SelectionMode = SelectionMode.Single;
             
-
         }
+
+       // public void()
 
 
 
