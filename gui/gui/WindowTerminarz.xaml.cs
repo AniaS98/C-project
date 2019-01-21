@@ -22,19 +22,25 @@ namespace gui
 
         public WindowTerminarz(Pracownik wybrany)
         {
-            List<string> tymczasowy = new List<string>();
-            DateTime data1 = new DateTime(2019, 1, 1);
+            List<DateTime> tymczasowy = new List<DateTime>();
+            //DateTime data1 = new DateTime(2018, 12, 31);
+            DateTime data1 = new DateTime();
+            data1 = DateTime.Now.AddDays(-1);
             InitializeComponent();
             Dane_pracownika.Text = wybrany.Imie+" "+ wybrany.Nazwisko;
-            int n = (DateTime.Now - data1).Days;
-            for(int i=n;i<(n+30);i++)
+            for(int i=0;i<30;i++)
             {
-                tymczasowy.Add( wybrany.kalendarz[i].ToString() );
-
+                data1 = data1.AddDays(1);
+                tymczasowy.Add(data1);
             }
             listbox_terminarz.ItemsSource = tymczasowy;
 
+
+            //listbox_zamowienia.ItemsSource = wybrany.terminarz[listbox_terminarz.SelectedIndex];
+
         }
+
+
 
         private void Powrot(object sender, RoutedEventArgs e)
         {
@@ -45,5 +51,12 @@ namespace gui
         {
 
         }
+
+        public void Lista(object sender, SelectionChangedEventArgs e)
+        {
+            listbox_terminarz.SelectionMode = SelectionMode.Single;
+        }
+
+        
     }
 }

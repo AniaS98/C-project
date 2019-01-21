@@ -19,14 +19,13 @@ namespace Projekt
         public DateTime[] kalendarz = new DateTime[366]; //Tu ni dałam getów setów, ale jak nie działą to dodajcie :)
 
         public List<string>[] Terminarz { get => terminarz; set => terminarz = value; }
+        public DateTime[] Kalendarz { get => kalendarz; set => kalendarz = value; }
 
         public void PrzeliczenieKalendarza()
         {
-            DateTime a = new DateTime(01 - 01 - 19);
             for (int i = 0; i < 366; i++)
             {
-                kalendarz[i] = a;
-                a.AddDays(1);
+                kalendarz[i] = DateTime.Now.AddDays(i);
             }
         }
 

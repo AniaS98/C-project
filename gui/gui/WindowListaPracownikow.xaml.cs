@@ -21,8 +21,11 @@ namespace gui
     partial class WindowListaPracownikow : Window
     {
         public Zespol zespol= new Zespol("Pudelko");
+        public Pracownik p1 = new Pracownik("Jan", "Kot", "11111111111", Plcie.M);
         public ObservableCollection <Pracownik> lista;
+        //zespol.DodajPracownika(p1);
 
+        
 
         public WindowListaPracownikow()
         {
@@ -51,7 +54,6 @@ namespace gui
             listbox_zespol.SelectionMode = SelectionMode.Single;
         }
 
-       // public void()
 
 
 

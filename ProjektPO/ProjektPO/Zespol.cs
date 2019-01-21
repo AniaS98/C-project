@@ -94,7 +94,7 @@ namespace Projekt
                 bool spr = false;
                 for (int i = 0; i < liczbaPracownikow && spr == false; i++)
                 {
-                    int n = Array.IndexOf(Pracownicy[i].kalendarz, data);
+                    int n = Array.IndexOf(Pracownicy[i].Kalendarz, data);
                     if (Pracownicy[i].Terminarz[n].Count < 15)
                     {
                         indeksyDaty.Add(n);

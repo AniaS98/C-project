@@ -20,6 +20,7 @@
         <Label Content="Zamówienia:" HorizontalAlignment="Left" Margin="297,95,0,0" VerticalAlignment="Top" Cursor="Arrow" FontFamily="Segoe UI Black" Width="209" FontSize="25" Foreground="White" Height="58"/>
         <Label Content="Pracownik:" HorizontalAlignment="Left" Margin="52,37,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" Width="209" FontSize="25" Foreground="White" Height="58" />
         <TextBox Name="Dane_pracownika" HorizontalAlignment="Left" Height="22" Margin="261,55,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" TextChanged="Imie_TextChanged"/>
+        <Button Name="Sprawdz" Content="Sprawdź" HorizontalAlignment="Left" Height="25" Margin="566,339,0,0" VerticalAlignment="Top" Width="101"/>
 
     </Grid>
 </Window>

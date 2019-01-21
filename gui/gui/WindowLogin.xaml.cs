@@ -24,6 +24,7 @@ namespace gui
         public string haslo="admin";
 
 
+
         public WindowLogin()
         {
             InitializeComponent();
