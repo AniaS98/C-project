@@ -22,8 +22,7 @@ namespace Projekt
             listaZamowien = new List<Zamowienie>(); //?
         }
        
-        public Klient(string imie, string nazwisko, string pesel, Plcie plec) 
-            : base(imie, nazwisko, pesel, plec)
+        public Klient(string imie, string nazwisko, string pesel, Plcie plec) : base(imie, nazwisko, pesel, plec)
         {
             listaZamowien = new List<Zamowienie>();
         }

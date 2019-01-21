@@ -32,7 +32,7 @@ namespace gui
 
        public  void Dodaj(object sender, RoutedEventArgs e)
         {
-            Pracownik p = new Pracownik();
+            Pracownik p = new Pracownik("","","",Plcie.K);
             WindowDodajPracownika okno = new WindowDodajPracownika(p);
             okno.ShowDialog();
             zespol.DodajPracownika(p);
@@ -47,8 +47,12 @@ namespace gui
 
         public void Lista(object sender, SelectionChangedEventArgs e)
         {
+            
 
         }
+
+
+
     }
 }
 
