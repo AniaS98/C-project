@@ -20,7 +20,7 @@ namespace gui
     /// </summary>
     partial class WindowListaPracownikow : Window
     {
-        public Zespol zespol= new Zespol();
+        public Zespol zespol= new Zespol("Pudelko");
         public ObservableCollection <Pracownik> lista;
         
         public WindowListaPracownikow()
