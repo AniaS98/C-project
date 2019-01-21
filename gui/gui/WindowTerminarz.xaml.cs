@@ -10,7 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using Projekt;
 
 namespace gui
 {
@@ -19,13 +19,13 @@ namespace gui
     /// </summary>
     public partial class WindowTerminarz : Window
     {
-      
+       //Pracownik pracownik;
 
         public WindowTerminarz()
         {
             InitializeComponent();
-            //lista = new ObservableCollection<>();
-            //listbox_terminarz.ItemsSource = lista;
+            //Imie.Text = pracownik.imie;
+            //Nazwisko.Text = pracownik.nazwisko;
         }
 
         private void Powrot(object sender, RoutedEventArgs e)

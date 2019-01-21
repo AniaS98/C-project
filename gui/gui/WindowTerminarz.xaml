@@ -13,10 +13,14 @@
                 <GradientStop Color="#FF1A5187" Offset="0.103"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="Daty:" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,38,620,0" RenderTransformOrigin="0.474,0.577" FontSize="25"  Cursor="Arrow" FontFamily="Segoe UI Black" Width="120" Foreground="White" Height="58"/>
-        <Label Content="Ilość zamówień: " HorizontalAlignment="Left" Height="62" Margin="52,235,0,0" VerticalAlignment="Top" Width="222" FontSize="25"  Cursor="Arrow" FontFamily="Segoe UI Black"  Foreground="White"/>
+        <Label Content="Daty:" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,95,620,0" RenderTransformOrigin="0.474,0.577" FontSize="25"  Cursor="Arrow" FontFamily="Segoe UI Black" Width="120" Foreground="White" Height="58"/>
         <Button Content="Powrót" HorizontalAlignment="Left" Height="25" Margin="82,339,0,0"  FontSize="14" FontFamily="Segoe UI Semibold" VerticalAlignment="Top" Width="90" Click="Powrot"/>
-        <ListBox Name="lisbox_terminarz" HorizontalAlignment="Left" Height="112" Margin="82,96,0,0" VerticalAlignment="Top" Width="470"/>
+        <ListBox Name="listbox_terminarz" HorizontalAlignment="Left" Height="120" Margin="52,153,0,0" VerticalAlignment="Top" Width="159"/>
+        <ListBox Name="listbox_zamowienia" HorizontalAlignment="Left" Height="120" Margin="297,153,0,0" VerticalAlignment="Top" Width="370"/>
+        <Label Content="Zamówienia:" HorizontalAlignment="Left" Margin="297,95,0,0" VerticalAlignment="Top" Cursor="Arrow" FontFamily="Segoe UI Black" Width="209" FontSize="25" Foreground="White" Height="58"/>
+        <Label Content="Pracownik:" HorizontalAlignment="Left" Margin="52,37,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" Width="209" FontSize="25" Foreground="White" Height="58" />
+        <TextBox Name="Imie" HorizontalAlignment="Left" Height="22" Margin="261,55,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="183"/>
+        <TextBox Name="Nazwisko" HorizontalAlignment="Left" Height="23" Margin="469,55,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="194"/>
 
     </Grid>
 </Window>
