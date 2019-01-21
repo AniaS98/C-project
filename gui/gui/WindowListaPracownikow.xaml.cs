@@ -22,7 +22,8 @@ namespace gui
     {
         public Zespol zespol= new Zespol("Pudelko");
         public ObservableCollection <Pracownik> lista;
-        
+
+
         public WindowListaPracownikow()
         {
             InitializeComponent();
@@ -41,14 +42,13 @@ namespace gui
 
         public void Dalej(object sender, RoutedEventArgs e)
         {
-            WindowTerminarz okno = new WindowTerminarz();
+            WindowTerminarz okno = new WindowTerminarz(zespol.pracownicy[listbox_zespol.SelectedIndex]);
             okno.ShowDialog();
         }
 
         public void Lista(object sender, SelectionChangedEventArgs e)
         {
             listbox_zespol.SelectionMode = SelectionMode.Single;
-            
         }
 
        // public void()
