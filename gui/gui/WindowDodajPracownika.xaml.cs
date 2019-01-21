@@ -40,9 +40,9 @@ namespace gui
                 textbox_imie.Text = osoba.Imie;
                 textbox_nazwisko.Text =osoba.Nazwisko;
                 if ((osoba.plec) == Plcie.K)
-                    combobox.Text = "kobieta";
+                    combobox_plec.Text = "kobieta";
                 else
-                    combobox.Text = "mężczyna";
+                    combobox_plec.Text = "mężczyna";
             }
         }
 
@@ -56,9 +56,10 @@ namespace gui
             osoba.pesel = textbox_pesel.Text;
             osoba.imie = textbox_imie.Text;
             osoba.nazwisko = textbox_nazwisko.Text;
-            if (combobox.Text == " kobieta") osoba.plec = Plcie.K;
+            if (combobox_plec.Text == "kobieta")
+                this.osoba.plec = Plcie.K;
             else
-                osoba.plec = Plcie.M;
+                this.osoba.plec = Plcie.M;
             this.Close();
         }
     }

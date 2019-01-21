@@ -22,7 +22,7 @@
         <TextBox Name="textbox_pesel" HorizontalAlignment="Left" Height="23" Margin="319,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218"/>
         <Button Click="anuluj" Content="Anuluj" HorizontalAlignment="Left" Margin="250,350,0,0" VerticalAlignment="Top" Width="90" FontSize="14" FontFamily="Segoe UI Semibold"/>
         <Button Click="dodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="459,350,0,0" VerticalAlignment="Top" Width="90" FontSize="14" FontFamily="Segoe UI Semibold"/>
-        <ComboBox Name="combobox" HorizontalAlignment="Left" Margin="319,239,0,0" VerticalAlignment="Top" Width="218">
+        <ComboBox Name="combobox_plec" HorizontalAlignment="Left" Margin="319,239,0,0" VerticalAlignment="Top" Width="218">
             <ComboBoxItem x:Name ="K">kobieta</ComboBoxItem>
             <ComboBoxItem x:Name ="M">mężczyzna</ComboBoxItem>
         </ComboBox>
