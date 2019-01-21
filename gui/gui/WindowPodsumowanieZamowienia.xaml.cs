@@ -29,7 +29,7 @@ namespace gui
             Imie.Text = zamowienie.Osoba.imie;
             Nazwisko.Text = zamowienie.Osoba.nazwisko;
             Adres.Text = zamowienie.Adres.ToString();
-            LiczbaDni.Text = (zamowienie.DataKoncaZamowienia - zamowienie.DataRozpoczeciaZamowienia).ToString();
+            LiczbaDni.Text = (zamowienie.DataKoncaZamowienia.Date - zamowienie.DataRozpoczeciaZamowienia.Date).TotalDays.ToString();
             string alergeny = "";
             if (zamowienie.WybranaDieta.Alergeny.Any())
                 foreach (var a in zamowienie.WybranaDieta.Alergeny)
