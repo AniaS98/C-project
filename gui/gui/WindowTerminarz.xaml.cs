@@ -25,7 +25,7 @@ namespace gui
         {
             InitializeComponent();
             //Imie.Text = pracownik.imie;
-            //Nazwisko.Text = pracownik.nazwisko;
+            
         }
 
         private void Powrot(object sender, RoutedEventArgs e)

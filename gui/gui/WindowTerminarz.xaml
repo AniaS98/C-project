@@ -19,8 +19,7 @@
         <ListBox Name="listbox_zamowienia" HorizontalAlignment="Left" Height="120" Margin="297,153,0,0" VerticalAlignment="Top" Width="370"/>
         <Label Content="Zamówienia:" HorizontalAlignment="Left" Margin="297,95,0,0" VerticalAlignment="Top" Cursor="Arrow" FontFamily="Segoe UI Black" Width="209" FontSize="25" Foreground="White" Height="58"/>
         <Label Content="Pracownik:" HorizontalAlignment="Left" Margin="52,37,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" Width="209" FontSize="25" Foreground="White" Height="58" />
-        <TextBox Name="Imie" HorizontalAlignment="Left" Height="22" Margin="261,55,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="183"/>
-        <TextBox Name="Nazwisko" HorizontalAlignment="Left" Height="23" Margin="469,55,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="194"/>
+        <TextBox Name="Imie" HorizontalAlignment="Left" Height="22" Margin="261,55,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349"/>
 
     </Grid>
 </Window>
