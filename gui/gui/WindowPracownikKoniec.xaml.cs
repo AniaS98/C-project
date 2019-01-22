@@ -23,9 +23,16 @@ namespace gui
         public WindowPracownikKoniec(Pracownik wybrany, int indeks)
         {
             InitializeComponent();
+            DateTime data1 = new DateTime(2019, 1, 1);
+            int dni = (DateTime.Now - data1).Days;
+            indeks = indeks + dni;
+            data1 = data1.AddDays(indeks);
+            texbox_data.Text = data1.ToString();
 
-            texbox_data.Text = indeks.ToString();
 
+
+
+            listbox_zamowienia.ItemsSource = wybrany.Terminarz[indeks];
         }
 
         private void Powrot(object sender, RoutedEventArgs e)
