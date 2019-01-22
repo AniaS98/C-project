@@ -57,6 +57,10 @@ namespace gui
             WindowPracownikKoniec okno = new WindowPracownikKoniec();
             okno.ShowDialog();
         }
-    
+
+        private void Imie_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
