@@ -41,15 +41,9 @@ namespace gui
         }
 
 
-
         private void Powrot(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void Imie_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
 
         public void Lista(object sender, SelectionChangedEventArgs e)
@@ -57,6 +51,12 @@ namespace gui
             listbox_terminarz.SelectionMode = SelectionMode.Single;
         }
 
-        
+        private void Sprawdz(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            WindowPracownikKoniec okno = new WindowPracownikKoniec();
+            okno.ShowDialog();
+        }
+    
     }
 }

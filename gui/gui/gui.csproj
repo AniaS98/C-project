@@ -82,6 +82,9 @@
     <Compile Include="WindowKlientKoniec.xaml.cs">
       <DependentUpon>WindowKlientKoniec.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowPracownikKoniec.xaml.cs">
+      <DependentUpon>WindowPracownikKoniec.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowSzczegolyZamowienia.xaml.cs">
       <DependentUpon>WindowSzczegolyZamowienia.xaml</DependentUpon>
     </Compile>
@@ -133,6 +136,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="WindowKlientKoniec.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowPracownikKoniec.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

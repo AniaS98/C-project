@@ -16,8 +16,8 @@
         <Label Content="Panel logowania do systemu:" HorizontalAlignment="Center"  Margin="162,61,150,0" VerticalAlignment="Top" FontSize="32"  RenderTransformOrigin="1.074,-1.962" Cursor="Arrow" FontFamily="Segoe UI Black" Width="480" Foreground="White"/>
         <Label Content="Login: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,166,0,0" Foreground="#FFF3ECEC" FontSize="24" RenderTransformOrigin="0.426,0.81"/>
         <Label Content="Hasło: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,233,0,0" Foreground="#FFF3ECEC" FontSize="24" RenderTransformOrigin="0.426,0.81"/>
-        <PasswordBox Name="passwordbox_haslo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="289,240,0,0" Height="35" Width="312" RenderTransformOrigin="0.59,0.614"/>
-        <TextBox Name="textbox_login" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="312" Margin="289,169,0,0"/>
+        <PasswordBox Name="passwordbox_haslo" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Margin="289,240,0,0" Height="35" Width="312" RenderTransformOrigin="0.59,0.614"/>
+        <TextBox Name="textbox_login" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" FontSize="20" Text="" VerticalAlignment="Top" Width="312" Margin="289,169,0,0"/>
         <Button Content="Zaloguj się" Width="90" Margin="584,311,0,0" Height="27" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="14" RenderTransformOrigin="0.722,0.593" Click="Zaloguj"/>
         <Button Content="Powrót" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="86,357,0,0" Height="25" FontSize="14" FontFamily="Segoe UI Semibold" Click="Powrot"/>
 
