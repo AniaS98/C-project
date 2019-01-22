@@ -25,8 +25,6 @@ namespace gui
         public ObservableCollection <Pracownik> lista;
         //zespol.DodajPracownika(p1);
 
-        
-
         public WindowListaPracownikow()
         {
             InitializeComponent();
@@ -45,6 +43,7 @@ namespace gui
 
         public void Dalej(object sender, RoutedEventArgs e)
         {
+            this.Close();
             WindowTerminarz okno = new WindowTerminarz(zespol.pracownicy[listbox_zespol.SelectedIndex]);
             okno.ShowDialog();
         }

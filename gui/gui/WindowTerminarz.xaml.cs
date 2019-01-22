@@ -19,6 +19,7 @@ namespace gui
     /// </summary>
     public partial class WindowTerminarz : Window
     {
+        Pracownik jedyny = new Pracownik("","","",Plcie.K);
 
         public WindowTerminarz(Pracownik wybrany)
         {
@@ -34,12 +35,11 @@ namespace gui
                 tymczasowy.Add(data1);
             }
             listbox_terminarz.ItemsSource = tymczasowy;
-
+            jedyny = wybrany;
 
             //listbox_zamowienia.ItemsSource = wybrany.terminarz[listbox_terminarz.SelectedIndex];
 
         }
-
 
 
         private void Powrot(object sender, RoutedEventArgs e)
@@ -47,16 +47,21 @@ namespace gui
             this.Close();
         }
 
-        private void Imie_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         public void Lista(object sender, SelectionChangedEventArgs e)
         {
             listbox_terminarz.SelectionMode = SelectionMode.Single;
         }
 
-        
+        private void Sprawdz(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            WindowPracownikKoniec okno = new WindowPracownikKoniec(jedyny, listbox_terminarz.SelectedIndex);
+            okno.ShowDialog();
+        }
+
+        private void Imie_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
