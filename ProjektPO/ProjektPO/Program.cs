@@ -23,9 +23,7 @@ namespace Projekt
                     }
                 case '1':
                     {
-                        string imie;
-                        string nazwisko;
-                        string pesel;
+                        string imie, nazwisko, pesel;
                         Console.WriteLine("Podaj imie: ");
                         imie = Console.ReadLine();
                         Console.WriteLine("Nazwisko: ");
@@ -85,7 +83,7 @@ namespace Projekt
                                 }
                         }
                         int alergen;
-                        Console.WriteLine("Wybierz alergeny: ");
+                        Console.WriteLine("Wybierz alergeny z listy: ");
                         Console.WriteLine("1-Brak");
                         Console.WriteLine("2-Gluten");
                         Console.WriteLine("3-Mleko");
@@ -168,6 +166,33 @@ namespace Projekt
                                     break;
                                 }*/
                         }
+
+                        string ulica, numer_domu, numer_mieszkania, kod, miejscowosc;
+                        Console.WriteLine("Wprowadź ulicę: ");
+                        ulica = Console.ReadLine();
+                        Console.WriteLine("Wprowadź numer domu:");
+                        numer_domu = Console.ReadLine();
+                        Console.WriteLine("Wprowadź numer mieszkania: ");
+                        numer_mieszkania = Console.ReadLine();
+                        Console.WriteLine("Podaj miejscowość: ");
+                        miejscowosc = Console.ReadLine();
+                        Console.WriteLine("Podaj kod pocztowy: ");
+                        kod = Console.ReadLine();
+
+                        string data_rozpoczecia, data_zakonczenia;
+                        Console.WriteLine("Podaj datę rozpoczęcia: ");
+                        data_rozpoczecia = Console.ReadLine();
+                        Console.WriteLine("Podaj datę zakończenia: ");
+                        data_zakonczenia = Console.ReadLine();
+
+                        Console.WriteLine();
+                        Console.WriteLine("PODSUMOWANIE:");
+                        Console.WriteLine("Dane osobowe:");
+                        Console.WriteLine(imie + " " + nazwisko+", "+pesel);
+                        Console.WriteLine("Dane dostawy:");
+                        Console.WriteLine("ul: "+ulica + " " + numer_domu+"/"+numer_mieszkania+", "+miejscowosc+" "+kod);
+                        Console.WriteLine("Szczegóły diety: ");
+
 
 
 
