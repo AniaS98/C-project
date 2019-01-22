@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektPO", "ProjektPO\Proj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gui", "..\gui\gui\gui.csproj", "{3BBECC69-A1CD-44A9-B51A-83FD8941C958}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testy", "Testy\Testy.csproj", "{919FDE9A-7A6B-44A3-ACE8-5C9315089556}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3BBECC69-A1CD-44A9-B51A-83FD8941C958}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BBECC69-A1CD-44A9-B51A-83FD8941C958}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BBECC69-A1CD-44A9-B51A-83FD8941C958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{919FDE9A-7A6B-44A3-ACE8-5C9315089556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919FDE9A-7A6B-44A3-ACE8-5C9315089556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{919FDE9A-7A6B-44A3-ACE8-5C9315089556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{919FDE9A-7A6B-44A3-ACE8-5C9315089556}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
