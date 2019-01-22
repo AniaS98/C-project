@@ -19,7 +19,7 @@ namespace gui
     /// </summary>
     public partial class WindowTerminarz : Window
     {
-        Pracownik jedyny = new Pracownik("","","",Plcie.K);
+        Pracownik jedyny = new Pracownik("", "", "", Plcie.K);
 
         public WindowTerminarz(Pracownik wybrany)
         {
@@ -35,6 +35,7 @@ namespace gui
                 tymczasowy.Add(data1);
             }
             listbox_terminarz.ItemsSource = tymczasowy;
+
             jedyny = wybrany;
 
             //listbox_zamowienia.ItemsSource = wybrany.terminarz[listbox_terminarz.SelectedIndex];
