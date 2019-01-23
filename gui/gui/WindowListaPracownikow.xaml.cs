@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using Projekt;
+using System.Media;
 
 namespace gui
 {
@@ -44,8 +45,16 @@ namespace gui
         public void Dalej(object sender, RoutedEventArgs e)
         {
             this.Close();
-            WindowTerminarz okno = new WindowTerminarz(zespol.pracownicy[listbox_zespol.SelectedIndex]);
-            okno.ShowDialog();
+            try
+            {
+                WindowTerminarz okno = new WindowTerminarz(zespol.pracownicy[listbox_zespol.SelectedIndex]);
+                okno.ShowDialog();
+            }
+            catch(ArgumentOutOfRangeException)
+            {
+                SystemSounds.Exclamation.Play();
+                MessageBox.Show("Nie wybrano żadnego pracownika.");
+            }
         }
 
         public void Lista(object sender, SelectionChangedEventArgs e)

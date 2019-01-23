@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Media;
+using System.Runtime.Serialization.Json;
 using System.Text;
 
 namespace Projekt
@@ -139,6 +142,34 @@ namespace Projekt
         public int CompareTo(Zamowienie z)
         {
             return numerZamowienia.CompareTo(z.numerZamowienia);
+        }
+
+        public void ZapiszJSON(string nazwaPliku)
+        {
+            DataContractJsonSerializer jsonSerializer = new DataContractJsonSerializer(typeof(Zamowienie));
+            using (var fstream = File.Create(nazwaPliku))
+            {
+                jsonSerializer.WriteObject(fstream, this);
+            }
+        }
+
+        public static Zamowienie OdczytajJSON(string nazwaPliku)
+        {
+            try
+            {
+                FileStream fstream = new FileStream(nazwaPliku, FileMode.Open);
+                DataContractJsonSerializer jsonSerializer = new DataContractJsonSerializer(typeof(Zamowienie));
+                fstream.Position = 0;
+                Zamowienie z = (Zamowienie)jsonSerializer.ReadObject(fstream);
+                fstream.Close();
+                return z;
+            }
+            catch (FileNotFoundException)
+            {
+                SystemSounds.Exclamation.Play();
+                Console.WriteLine("Plik o padanej nazwie ({0}) nie istnieje", nazwaPliku);
+            }
+            return null;
         }
 
     }

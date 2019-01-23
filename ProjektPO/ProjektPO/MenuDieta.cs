@@ -7,6 +7,7 @@ namespace Projekt
 /// <summary>  
 ///  Ta klasa zawiera szczegółowe informacje na temat diety, przypisanej jej cenie i alergenach. 
 /// </summary> 
+    [Serializable]
     public class MenuDieta : Dieta, ICloneable
     {
         List<Dieta> menu;

@@ -215,6 +215,59 @@ namespace Projekt
                         Console.WriteLine("!!!");
                         break;
                     }
+                case '3':
+                    {
+                        Zespol z = new Zespol();
+
+                        Pracownik p1 = new Pracownik("Adam", "Kowalski", "87010556817", Plcie.M);
+                        Pracownik p2 = new Pracownik("Maria", "Nowak", "92052189404", Plcie.K);
+                        Pracownik p3 = new Pracownik("Damian", "Piekarz", "93100191512", Plcie.M);
+                        Pracownik p4 = new Pracownik("Kamila", "Walkowicz", "85031789100", Plcie.K);
+                        Pracownik p5 = new Pracownik("Maksymilian", "Rak", "97072753613", Plcie.M);
+                        Pracownik p6 = new Pracownik("Agnieszka", "Misiak", "86041632109", Plcie.K);
+
+                        z.DodajPracownika(p1);
+                        p1.PrzeliczenieKalendarza();
+                        z.DodajPracownika(p2);
+                        p2.PrzeliczenieKalendarza();
+                        z.DodajPracownika(p3);
+                        p3.PrzeliczenieKalendarza();
+                        z.DodajPracownika(p4);
+                        p4.PrzeliczenieKalendarza();
+                        z.DodajPracownika(p5);
+                        p5.PrzeliczenieKalendarza();
+                        z.DodajPracownika(p6);
+                        p6.PrzeliczenieKalendarza();
+
+                        z.ZapiszJSON("przyk-zespol.json");
+
+                        //Zespol ze = Zespol.OdczytajJSON("przyk-zespol");
+                        //Console.WriteLine(ze);
+
+                        break;
+                    }
+                case '4':
+                    {
+                        DateTime data1 = new DateTime(2019, 1, 23);
+                        DateTime data2 = new DateTime(2019, 2, 17);
+                        Adres adres = new Adres("Grunwaldzka", "179", 13, "80-169", "Gdańsk");
+                        List<SAlergen> alergeny = new List<SAlergen>();
+                        SAlergen a1 = new SAlergen(ERodzajAlergenu.skorupiaki, 1.0);
+                        SAlergen a2 = new SAlergen(ERodzajAlergenu.seler, 2.0);
+                        alergeny.Add(a1);
+                        alergeny.Add(a2);
+                        Dieta dieta = new Dieta(ERodzajeDiet.wegetariańska, 32.50, alergeny);
+                        MenuDieta mdieta = new MenuDieta();
+                        Zamowienie z = new Zamowienie(data1, data2, adres, dieta, mdieta);
+
+                        z.ZapiszJSON("przyk-zamowienie.json");
+
+                        //Zamowienie za = Zamowienie.OdczytajJSON("przyk-zamowienie.json");
+                        //Console.WriteLine(za.Adres);
+
+                        break;
+                    }
+
             }
             Console.ReadKey();
         } 

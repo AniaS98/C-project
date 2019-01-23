@@ -35,6 +35,7 @@ namespace Projekt
         mięczaki,
     }
 
+    [Serializable]
     public class SAlergen
     {
         ERodzajAlergenu nazwa;
@@ -54,6 +55,7 @@ namespace Projekt
         public ERodzajAlergenu Nazwa { get => nazwa; set => nazwa = value; }
     }
 
+    [Serializable]
     public class Dieta : ICloneable, IComparable<Dieta>
     {
         ERodzajeDiet typ;

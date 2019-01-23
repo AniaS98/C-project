@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Projekt
 {
+    [Serializable]
     public class Adres : ICloneable, IComparable<Adres>
     {
         string ulica;
