@@ -13,6 +13,8 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using Projekt;
 using System.Media;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace gui
 {
@@ -21,7 +23,8 @@ namespace gui
     /// </summary>
     partial class WindowListaPracownikow : Window
     {
-        public Zespol zespol= new Zespol("Pudelko");
+        public Zespol zespol = Zespol.OdczytajJSON("zespol.json");
+        //public Zespol zespol= new Zespol("Pudelko");
         public Pracownik p1 = new Pracownik("Jan", "Kot", "11111111111", Plcie.M);
         public ObservableCollection <Pracownik> lista;
         //zespol.DodajPracownika(p1);
@@ -29,8 +32,8 @@ namespace gui
         public WindowListaPracownikow()
         {
             InitializeComponent();
-            lista = new ObservableCollection<Pracownik>();
-            listbox_zespol.ItemsSource = lista;
+            //lista = new ObservableCollection<Pracownik>();
+            listbox_zespol.ItemsSource = zespol.pracownicy;
         }
 
        public  void Dodaj(object sender, RoutedEventArgs e)
@@ -38,8 +41,11 @@ namespace gui
             Pracownik p = new Pracownik("","","",Plcie.K);
             WindowDodajPracownika okno = new WindowDodajPracownika(p);
             okno.ShowDialog();
+            p.PrzeliczenieKalendarza();
             zespol.DodajPracownika(p);
             lista.Add(p);
+
+            zespol.ZapiszJSON("zespol.json");
         }
 
         public void Dalej(object sender, RoutedEventArgs e)

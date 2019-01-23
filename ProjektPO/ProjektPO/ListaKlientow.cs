@@ -14,7 +14,7 @@ namespace Projekt
 /// </summary> 
 
     [Serializable]
-    class ListaKlientow : ICloneable, IComparable<ListaKlientow>, ISerializowalnaJSON
+    public class ListaKlientow : ICloneable, IComparable<ListaKlientow>, ISerializowalnaJSON
     {
         int LiczbaKlientow;
         string nazwa;

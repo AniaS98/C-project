@@ -32,7 +32,7 @@
         <TextBlock Name="LiczbaDni" HorizontalAlignment="Left" Height="32" Margin="413.681,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Grid.Column="1"/>
         <TextBlock Name="Dieta" HorizontalAlignment="Left" Height="32" Margin="413.681,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Grid.Column="1"/>
         <TextBlock Name="Alergeny" HorizontalAlignment="Left" Height="33" Margin="416.681,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Grid.Column="1"/>
-        <Label Content="Cena:" HorizontalAlignment="Left" Height="32" Margin="286.681,259,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="Cena za dzień:" HorizontalAlignment="Left" Height="32" Margin="286.681,259,0,0" VerticalAlignment="Top" Width="76" FontFamily="Global User Interface" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
         <TextBlock Name="Cena" HorizontalAlignment="Left" Height="32" Margin="402.681,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Grid.Column="1"/>
 
 
