@@ -27,7 +27,7 @@ namespace Projekt
             listaZamowien = new List<Zamowienie>();
         }
 
-        void DodajZamowienie(Zamowienie z)
+        public void DodajZamowienie(Zamowienie z)
         {
             listaZamowien.Add(z);
         }

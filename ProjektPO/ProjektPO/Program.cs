@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Media;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -54,7 +57,12 @@ namespace Projekt
                         Console.WriteLine("4-bezlaktozy");
                         Console.WriteLine("5-bezglutenu");
                         dieta = Console.Read();
-                        switch(dieta)
+
+                        List<SAlergen> alergeny = new List<SAlergen>();
+                        Dieta dieta1 = new Dieta(ERodzajeDiet.podstawowa, 25.00, alergeny);
+                        MenuDieta mdieta = new MenuDieta();
+
+                        switch (dieta)
                         {
                             case '1':
                                 {
@@ -64,21 +72,25 @@ namespace Projekt
                             case '2':
                                 {
                                     Console.WriteLine("Twój wybór: dieta wegetariańska.");
+                                    dieta1.Typ = ERodzajeDiet.wegetariańska;
                                     break;
                                 }
                             case '3':
                                 {
                                     Console.WriteLine("Twój wybór: dieta wegańska.");
+                                    dieta1.Typ = ERodzajeDiet.wegańska;
                                     break;
                                 }
                             case '4':
                                 {
                                     Console.WriteLine("Twój wybór: dieta bezlaktozy.");
+                                    dieta1.Typ = ERodzajeDiet.bezlaktozowa;
                                     break;
                                 }
                             case '5':
                                 {
                                     Console.WriteLine("Twój wybór: dieta bezglutenu.");
+                                    dieta1.Typ = ERodzajeDiet.bezglutenowa;
                                     break;
                                 }
                         }
@@ -93,10 +105,10 @@ namespace Projekt
                         Console.WriteLine("7-Orzechy");
                         Console.WriteLine("8-Soja");
                         Console.WriteLine("9-Sezam");
-                        Console.WriteLine("10-Gorczyca");
+                        /*Console.WriteLine("10-Gorczyca");
                         Console.WriteLine("11-Łubin");
                         Console.WriteLine("12-Seler");
-                        Console.WriteLine("13-Mięczaki");
+                        Console.WriteLine("13-Mięczaki");*/
                         alergen = Console.Read();
                         switch (alergen)
                         {
@@ -108,41 +120,49 @@ namespace Projekt
                             case '2':
                                 {
                                     Console.WriteLine("Twój wybór: gluten.");
+                                    alergeny.Add(new SAlergen(ERodzajAlergenu.gluten, 4.0));
                                     break;
                                 }
                             case '3':
                                 {
                                     Console.WriteLine("Twój wybór: mleko.");
+                                    alergeny.Add(new SAlergen(ERodzajAlergenu.mleko, 3.5));
                                     break;
                                 }
                             case '4':
                                 {
                                     Console.WriteLine("Twój wybór: jajka.");
+                                    alergeny.Add(new SAlergen(ERodzajAlergenu.jajka, 3.5));
                                     break;
                                 }
                             case '5':
                                 {
                                     Console.WriteLine("Twój wybór: ryby.");
+                                    alergeny.Add(new SAlergen(ERodzajAlergenu.ryby, 2.0));
                                     break;
                                 }
                             case '6':
                                 {
                                     Console.WriteLine("Twój wybór: skorupiaki.");
+                                    alergeny.Add(new SAlergen(ERodzajAlergenu.skorupiaki, 1.0));
                                     break;
                                 }
                             case '7':
                                 {
                                     Console.WriteLine("Twój wybór: orzechy.");
+                                    alergeny.Add(new SAlergen(ERodzajAlergenu.orzechy, 1.5));
                                     break;
                                 }
                             case '8':
                                 {
                                     Console.WriteLine("Twój wybór: soja.");
+                                    alergeny.Add(new SAlergen(ERodzajAlergenu.soja, 2.0));
                                     break;
                                 }
                             case '9':
                                 {
                                     Console.WriteLine("Twój wybór: sezam.");
+                                    alergeny.Add(new SAlergen(ERodzajAlergenu.sezam, 1.0));
                                     break;
                                 }
                             /*case '10':
@@ -174,6 +194,12 @@ namespace Projekt
                         numer_domu = Console.ReadLine();
                         Console.WriteLine("Wprowadź numer mieszkania: ");
                         numer_mieszkania = Console.ReadLine();
+                        int nr;
+                        if (!Int32.TryParse(numer_mieszkania, out nr))
+                        {
+                            SystemSounds.Exclamation.Play();
+                            Console.WriteLine("Podany numer mieszkania jest niepoprawny.");
+                        }
                         Console.WriteLine("Podaj miejscowość: ");
                         miejscowosc = Console.ReadLine();
                         Console.WriteLine("Podaj kod pocztowy: ");
@@ -181,9 +207,22 @@ namespace Projekt
 
                         string data_rozpoczecia, data_zakonczenia;
                         Console.WriteLine("Podaj datę rozpoczęcia: ");
+                        DateTime data_rozpoczecia1, data_zakonczenia1;
+
                         data_rozpoczecia = Console.ReadLine();
+                        if (!DateTime.TryParse(data_rozpoczecia, out data_rozpoczecia1))
+                        {
+                            SystemSounds.Exclamation.Play();
+                            Console.WriteLine("Niepoprawny format daty.");
+                        }
+
                         Console.WriteLine("Podaj datę zakończenia: ");
                         data_zakonczenia = Console.ReadLine();
+                        if (!DateTime.TryParse(data_zakonczenia, out data_zakonczenia1))
+                        {
+                            SystemSounds.Exclamation.Play();
+                            Console.WriteLine("Niepoprawny format daty.");
+                        }
 
                         Console.WriteLine();
                         Console.WriteLine("PODSUMOWANIE:");
@@ -193,7 +232,32 @@ namespace Projekt
                         Console.WriteLine("ul: "+ulica + " " + numer_domu+"/"+numer_mieszkania+", "+miejscowosc+" "+kod);
                         Console.WriteLine("Szczegóły diety: ");
 
+                        Klient k = new Klient(imie, nazwisko, pesel, Plcie.K);
+                        if(plec == 0)
+                        {
+                            k.plec = Plcie.M;
+                        }
 
+                        Adres a = new Adres(ulica, numer_domu, nr, kod, miejscowosc);
+                        Zamowienie z = new Zamowienie(data_rozpoczecia1, data_zakonczenia1, a, dieta1, mdieta);
+                        
+                        try
+                        {
+                            FileStream fstream = new FileStream("lista-klientow.json", FileMode.Open);
+                            DataContractJsonSerializer jsonSerializer = new DataContractJsonSerializer(typeof(ListaKlientow));
+                            fstream.Position = 0;
+                            ListaKlientow lk = (ListaKlientow)jsonSerializer.ReadObject(fstream);
+                            fstream.Close();
+                            lk.DodajKlienta(k);
+                            lk.ZapiszJSON("lista-klientow.json");
+                        }
+                        catch(FileNotFoundException)
+                        {
+                            List<Klient> lk1 = new List<Klient>();
+                            lk1.Add(k);
+                            ListaKlientow lk = new ListaKlientow("Pudelkowicze", lk1, 1);
+                            lk.ZapiszJSON("lista-klientow.json");
+                        }
 
 
                         break;
@@ -208,6 +272,7 @@ namespace Projekt
                         haslo = Console.ReadLine();
                         while (haslo != "admin" && login != "admin")
                         {
+                            SystemSounds.Exclamation.Play();
                             Console.WriteLine("Zły login lub hasło!");
                             break;
                         }
