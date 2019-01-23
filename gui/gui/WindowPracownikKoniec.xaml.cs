@@ -20,6 +20,8 @@ namespace gui
     /// </summary>
     public partial class WindowPracownikKoniec : Window
     {
+        public Zamowienie zamowienia = Zamowienie.OdczytajJSON("przyk-zamowienie");
+
         public WindowPracownikKoniec(Pracownik wybrany, int indeks)
         {
             InitializeComponent();
@@ -29,10 +31,12 @@ namespace gui
             data1 = data1.AddDays(indeks);
             texbox_data.Text = data1.ToString();
 
+            List<Zamowienie> lista = new List<Zamowienie>();
+            lista.Add(zamowienia);
 
 
-
-            listbox_zamowienia.ItemsSource = wybrany.Terminarz[indeks];
+            //listbox_zamowienia.ItemsSource = wybrany.Terminarz[indeks];
+            listbox_zamowienia.ItemsSource = lista;
         }
 
         private void Powrot(object sender, RoutedEventArgs e)

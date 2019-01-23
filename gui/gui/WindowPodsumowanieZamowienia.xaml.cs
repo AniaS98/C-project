@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Projekt;
 
 namespace gui
 {
@@ -21,6 +22,8 @@ namespace gui
     public partial class WindowPodsumowanieZamowienia: Window
     {
         Zamowienie zamowienie;
+
+        Zespol zespol = Zespol.OdczytajJSON("zespol.json");
 
         public WindowPodsumowanieZamowienia(Zamowienie zamowienie)
         {
@@ -39,6 +42,9 @@ namespace gui
             Dieta.Text = zamowienie.WybranaDieta.Typ.ToString();
             Alergeny.Text = alergeny;
             Cena.Text = zamowienie.WybranaDieta.Cena.ToString();
+            
+
+            
         }
 
         private void Button_Wstecz(object sender, RoutedEventArgs e)
@@ -53,6 +59,7 @@ namespace gui
             this.Close();
             WindowKlientKoniec okno = new WindowKlientKoniec(zamowienie.NumerZamowienia);
             okno.Show();
+            
         }
     }
 }
